@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mekor Chaim Yeshiva - Building Our Future</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Makor Chaim Yeshiva - Building Our Future</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600&family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Critical translations variable in head -->
+    <script>
+    // Pre-define translations variable - will be used by scripts/main.js
+    let currentLanguage = 'he';
+    </script>
 </head>
-<body>
+<body class="rtl">
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1 data-en="Mekor Chaim Yeshiva" data-he="ישיבת מקור חיים">ישיבת מקור חיים</h1>
-                <p class="tagline" data-en="Building Our Future Together" data-he="בונים יחד את עתידנו">בונים יחד את עתידנו</p>
+                <img src="mekor chaim logo turqiose.png" alt="Makor Chaim Yeshiva Logo" class="logo-image">
+                <div class="logo-text">
+                    <h1>ישיבת מקור חיים</h1>
+                    <p class="tagline">בונים יחד את עתידנו</p>
+                </div>
             </div>
             <nav class="nav">
-                <a href="#home" class="nav-link active" data-en="Home" data-he="בית">בית</a>
-                <a href="#message" class="nav-link" data-en="Rosh Yeshiva's Message" data-he="מסר ראש הישיבה">מסר ראש הישיבה</a>
-                <a href="#video" class="nav-link" data-en="Our Story" data-he="הסיפור שלנו">הסיפור שלנו</a>
-                <a href="#projects" class="nav-link" data-en="Current Projects" data-he="פרויקטים נוכחיים">פרויקטים נוכחיים</a>
-                <a href="#about" class="nav-link" data-en="About" data-he="אודות">אודות</a>
-                <a href="#contact" class="nav-link" data-en="Contact" data-he="צור קשר">צור קשר</a>
+                <a href="#contact" class="nav-link">צור קשר</a>
+                <a href="#gallery" class="nav-link">גלריה</a>
+                <a href="#about" class="nav-link">אודות</a>
+                <a href="#projects" class="nav-link">פרויקטים נוכחיים</a>
+                <a href="#video" class="nav-link">הסיפור שלנו</a>
+                <a href="#message" class="nav-link">מסר ראש הישיבה</a>
+                <a href="#home" class="nav-link active">בית</a>
                 <div class="language-toggle">
                     <button class="lang-btn" data-lang="en">EN</button>
                     <span class="lang-separator">|</span>
@@ -33,10 +42,14 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
-            <div class="hero-content fade-in-up">
-                <h1 class="hero-title" data-en="Makor Chaim - Source of Life" data-he='מקור חיים - "מקור החיים"'>מקור חיים - "מקור החיים"</h1>
-                <p class="hero-subtitle" data-en="Building our new campus in Gush Etzion where the Path of the Sons meets the Way of our Fathers" data-he="בונים את הקמפוס החדש שלנו בגוש עציון, שם דרך הבנים פוגשת דרך האבות">בונים את הקמפוס החדש שלנו בגוש עציון, שם דרך הבנים פוגשת דרך האבות</p>
-                <a href="#projects" class="cta-button" data-en="Support Our Vision" data-he="תמכו בחזון שלנו">תמכו בחזון שלנו</a>
+            <div class="hero-content">
+                <h1 class="hero-title" data-he='מקור חיים - "מקור החיים"'>מקור חיים - "מקור החיים"</h1>
+                <p class="hero-subtitle">בונים את הקמפוס החדש שלנו בגוש עציון, שם דרך הבנים פוגשת דרך האבות</p>
+                <a href="#projects" class="cta-button">תמכו בחזון שלנו</a>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+                <p class="scroll-text">גלה עוד</p>
             </div>
             <div class="hero-overlay"></div>
             <div class="hero-particles"></div>
@@ -47,19 +60,19 @@
             <div class="container">
                 <div class="rav-message-content slide-in-up">
                     <div class="rav-photo-container">
-                        <img src="rabbi-dov-zinger.jpg" alt="Rabbi Dov Zinger" class="rav-photo" id="rav-photo">
+                        <img src="rav-dov.jpg" alt="Rabbi Dov Zinger" class="rav-photo" id="rav-photo">
                         <div class="rav-photo-frame"></div>
                     </div>
                     <div class="rav-message-text">
-                        <h2 class="rav-title" data-en="A Message from Rabbi Dov Zinger" data-he="מסר מהרב דוב זינגר">מסר מהרב דוב זינגר</h2>
+                        <h2 class="rav-title">מסר מהרב דוב זינגר</h2>
                         <div class="rav-message-content-text">
-                            <p data-en="[Rabbi Dov Zinger's message about the new campus and current projects will appear here - please provide the English text]" data-he="[כאן יופיע מסר הרב דוב זינגר על הקמפוס החדש והפרויקטים הנוכחיים - אנא ספק את הטקסט בעברית]">[כאן יופיע מסר הרב דוב זינגר על הקמפוס החדש והפרויקטים הנוכחיים - אנא ספק את הטקסט בעברית]</p>
-                            <p data-en="[Second paragraph about the vision for Torah, Worship & Acts of Kindness - please provide the English text]" data-he="[פסקה שנייה על החזון לתורה, עבודה וגמילות חסדים - אנא ספק את הטקסט בעברית]">[פסקה שנייה על החזון לתורה, עבודה וגמילות חסדים - אנא ספק את הטקסט בעברית]</p>
+                            <p>[כאן יופיע מסר הרב דוב זינגר על הקמפוס החדש והפרויקטים הנוכחיים - אנא ספק את הטקסט בעברית]</p>
+                            <p>[פסקה שנייה על החזון לתורה, עבודה וגמילות חסדים - אנא ספק את הטקסט בעברית]</p>
                         </div>
                         <div class="rav-signature">
-                            <p class="signature-text" data-en="With blessings," data-he="בברכה,">בברכה,</p>
-                            <p class="signature-name" data-en="Rabbi Dov Zinger" data-he="הרב דוב זינגר">הרב דוב זינגר</p>
-                            <p class="signature-title" data-en="Rosh Yeshiva & Co-Founder" data-he="ראש ישיבה ומייסד שותף">ראש ישיבה ומייסד שותף</p>
+                            <p class="signature-text">בברכה,</p>
+                            <p class="signature-name">הרב דוב זינגר</p>
+                            <p class="signature-title">ראש ישיבה ומייסד שותף</p>
                         </div>
                     </div>
                 </div>
@@ -71,21 +84,21 @@
             <div class="container">
                 <div class="video-content slide-in-up">
                     <div class="video-header">
-                        <h2 class="section-title" data-en="Our Story in Song" data-he="הסיפור שלנו בשיר">Our Story in Song</h2>
-                        <p class="section-subtitle" data-en="Experience the spirit and soul of Mekor Chaim Yeshiva through our latest music video" data-he="חוו את הרוח והנשמה של ישיבת מקור חיים דרך הקליפ המוזיקלי החדש שלנו">Experience the spirit and soul of Mekor Chaim Yeshiva through our latest music video</p>
+                        <h2 class="section-title">Our Story in Song</h2>
+                        <p class="section-subtitle">Experience the spirit and soul of Makor Chaim Yeshiva through our latest music video</p>
                     </div>
                     <div class="video-container">
                         <div class="video-wrapper">
                             <iframe 
                                 src="https://www.youtube.com/embed/dskyz8n8ZUw?rel=0&modestbranding=1&showinfo=0" 
-                                title="Mekor Chaim Yeshiva Music Video" 
+                                title="Makor Chaim Yeshiva Music Video" 
                                 frameborder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                 allowfullscreen>
                             </iframe>
                         </div>
                         <div class="video-description">
-                            <p data-en="This heartfelt music video captures the essence of our yeshiva - the dedication to learning, the warmth of our community, and the growth of our students." data-he="הקליפ המוזיקלי המרגש הזה תופס את המהות של הישיבה שלנו - המסירות ללימוד, החמימות של הקהילה שלנו והצמיחה של התלמידים שלנו.">This heartfelt music video captures the essence of our yeshiva - the dedication to learning, the warmth of our community, and the growth of our students.</p>
+                            <p>This heartfelt music video captures the essence of our yeshiva - the dedication to learning, the warmth of our community, and the growth of our students.</p>
                         </div>
                     </div>
                 </div>
@@ -96,50 +109,64 @@
         <section id="projects" class="projects-section">
             <div class="container">
                 <div class="section-header slide-in-up">
-                    <h2 class="section-title" data-en="Current Projects" data-he="פרויקטים נוכחיים">Current Projects</h2>
-                    <p class="section-subtitle" data-en="Building tomorrow's leaders requires exceptional facilities today" data-he="בניית מנהיגי המחר דורשת מתקנים יוצאי דופן היום">Building tomorrow's leaders requires exceptional facilities today</p>
+                    <h2 class="section-title">Current Projects</h2>
+                    <p class="section-subtitle">Building tomorrow's leaders requires exceptional facilities today</p>
                 </div>
 
                 <div class="projects-grid">
                     <!-- Gym Project -->
                     <div class="project-card slide-in-left" onclick="openProjectDetails('gym')">
                         <div class="project-image">
-                            <img src="gym1.png" alt="Mekor Chaim Yeshiva Gym - Interior Design Concept" id="gym-image">
+                            <img src="gym1.png" alt="Makor Chaim Yeshiva Gym - Interior Design Concept" id="gym-image">
                             <div class="project-overlay">
                                 <div class="project-overlay-content">
-                                    <h3 data-en="Modern Fitness Center" data-he="מרכז כושר מודרני">Modern Fitness Center</h3>
-                                    <p data-en="Click to learn more" data-he="לחץ לקרוא עוד">Click to learn more</p>
+                                    <h3>Modern Fitness Center</h3>
+                                    <p>Click to learn more</p>
                                     <div class="arrow">→</div>
                                 </div>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title" data-en="Student Fitness & Wellness Center" data-he="מרכז כושר ובריאות לתלמידים">Student Fitness & Wellness Center</h3>
-                            <p class="project-description" data-en="A state-of-the-art gymnasium and fitness facility to promote physical wellness alongside spiritual growth." data-he="אולם התעמלות ומתקן כושר מתקדם לקידום בריאות גופנית לצד צמיחה רוחנית.">A state-of-the-art gymnasium and fitness facility to promote physical wellness alongside spiritual growth.</p>
+                            <h3 class="project-title">Student Fitness & Wellness Center</h3>
+                            <p class="project-description">A state-of-the-art gymnasium and fitness facility to promote physical wellness alongside spiritual growth.</p>
                             <div class="project-stats">
                                 <div class="stat">
                                     <span class="stat-number">5,000</span>
-                                    <span class="stat-label" data-en="sq ft" data-he="מ״ר">sq ft</span>
+                                    <span class="stat-label">sq ft</span>
                                 </div>
                                 <div class="stat">
                                     <span class="stat-number">150+</span>
-                                    <span class="stat-label" data-en="students served" data-he="תלמידים נהנים">students served</span>
+                                    <span class="stat-label">students served</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Placeholder for Future Projects -->
-                    <div class="project-card coming-soon slide-in-right">
+                    <!-- Dorms Project -->
+                    <div class="project-card slide-in-right" onclick="openProjectDetails('dorms')">
                         <div class="project-image">
-                            <div class="coming-soon-content">
-                                <h3 data-en="More Projects Coming Soon" data-he="פרויקטים נוספים בקרוב">More Projects Coming Soon</h3>
-                                <p data-en="Additional exciting developments in planning" data-he="פיתוחים מרגשים נוספים בתכנון">Additional exciting developments in planning</p>
+                            <img src="dorms1.png" alt="Makor Chaim Yeshiva Student Dormitories" id="dorms-image">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content">
+                                    <h3>Student Dormitories</h3>
+                                    <p>Click to learn more</p>
+                                    <div class="arrow">→</div>
+                                </div>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title" data-en="Future Developments" data-he="פיתוחים עתידיים">Future Developments</h3>
-                            <p class="project-description" data-en="We're continuously working to enhance our facilities and programs. Stay tuned for upcoming projects." data-he="אנו עובדים ללא הרף לשפר את המתקנים והתוכניות שלנו. הישארו מעודכנים לפרויקטים הקרובים.">We're continuously working to enhance our facilities and programs. Stay tuned for upcoming projects.</p>
+                            <h3 class="project-title">Modern Student Housing Complex</h3>
+                            <p class="project-description">Comfortable and inspiring dormitories designed to foster community and create the perfect environment for Torah study.</p>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <span class="stat-number">120</span>
+                                    <span class="stat-label">beds</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">24/7</span>
+                                    <span class="stat-label">study access</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -151,22 +178,82 @@
             <div class="container">
                 <div class="about-content slide-in-up">
                     <div class="about-text">
-                        <h2 data-en="About Makor Chaim Yeshiva" data-he="אודות ישיבת מקור חיים">About Makor Chaim Yeshiva</h2>
-                        <p data-en="Established in 1985 by the late Rabbi Adin Steinsaltz together with Rabbi Dov Singer, Makor Chaim has been a pioneer in unique educational methods that empower spiritually honest, deep relationships between students and teachers, between man and G-d, and between man and his fellow man." data-he="נוסדה בשנת 1985 על ידי הרב עדין שטיינזלץ ז״ל יחד עם הרב דב סינגר, ישיבת מקור חיים הייתה חלוצה בשיטות חינוכיות ייחודיות המעצימות יחסים כנים, עמוקים בין תלמידים ומורים, בין האדם לקונו ובין אדם לחברו.">Established in 1985 by the late Rabbi Adin Steinsaltz together with Rabbi Dov Singer, Makor Chaim has been a pioneer in unique educational methods that empower spiritually honest, deep relationships between students and teachers, between man and G-d, and between man and his fellow man.</p>
-                        <p data-en="Our new campus in Gush Etzion, near Neve Daniel, sits where the ancient road of our Patriarchs meets modern Route 60 - truly where the Path of the Sons meets the Way of our Fathers. We seek to restore the balance of Torah, Worship & Acts of Kindness in our students through innovative education." data-he="הקמפוס החדש שלנו בגוש עציון, ליד נווה דניאל, יושב היכן שדרך האבות העתיקה פוגשת את כביש 60 המודרני - באמת היכן שדרך הבנים פוגשת דרך האבות. אנו מבקשים להחזיר את האזן של תורה, עבודה וגמילות חסדים בתלמידים שלנו דרך חינוך חדשני.">Our new campus in Gush Etzion, near Neve Daniel, sits where the ancient road of our Patrirachs meets modern Route 60 - truly where the Path of the Sons meets the Way of our Fathers. We seek to restore the balance of Torah, Worship & Acts of Kindness in our students through innovative education.</p>
+                        <h2>About Makor Chaim Yeshiva</h2>
+                        <p>Established in 1985 by the late Rabbi Adin Steinsaltz together with Rabbi Dov Singer, Makor Chaim has been a pioneer in unique educational methods that empower spiritually honest, deep relationships between students and teachers, between man and G-d, and between man and his fellow man.</p>
+                        <p>Our new campus in Gush Etzion, near Neve Daniel, sits where the ancient road of our Patrirachs meets modern Route 60 - truly where the Path of the Sons meets the Way of our Fathers. We seek to restore the balance of Torah, Worship & Acts of Kindness in our students through innovative education.</p>
                     </div>
                     <div class="about-stats">
                         <div class="stat-item slide-in-right" style="animation-delay: 0.2s;">
                             <span class="stat-number">1985</span>
-                            <span class="stat-label" data-en="Founded" data-he="נוסדה">Founded</span>
+                            <span class="stat-label">Founded</span>
                         </div>
                         <div class="stat-item slide-in-right" style="animation-delay: 0.4s;">
                             <span class="stat-number">40+</span>
-                            <span class="stat-label" data-en="Years of Innovation" data-he="שנות חדשנות">Years of Innovation</span>
+                            <span class="stat-label">Years of Innovation</span>
                         </div>
                         <div class="stat-item slide-in-right" style="animation-delay: 0.6s;">
                             <span class="stat-number">NEW</span>
-                            <span class="stat-label" data-en="Campus in Gush Etzion" data-he="קמפוס בגוש עציון">Campus in Gush Etzion</span>
+                            <span class="stat-label">Campus in Gush Etzion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Life Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <div class="section-header slide-in-up">
+                    <h2 class="section-title">Life at Makor Chaim</h2>
+                    <p class="section-subtitle">Experience the vibrant community of learning, growth, and friendship</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item slide-in-left">
+                        <img src="students-learning.jpg" alt="Students studying Torah in the Beit Midrash" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Deep Torah Learning</h3>
+                            <p>Students engaged in intensive study in our Beit Midrash</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item slide-in-up">
+                        <img src="campus-view.jpg" alt="Beautiful view of the Gush Etzion campus" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Inspiring Campus</h3>
+                            <p>Our stunning location in the heart of Gush Etzion</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item slide-in-right">
+                        <img src="students-discussion.jpg" alt="Students in animated Torah discussion" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Chavruta Learning</h3>
+                            <p>The traditional study partnership that builds deep understanding</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item slide-in-left">
+                        <img src="community-meal.jpg" alt="Students sharing a Shabbat meal" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Community & Brotherhood</h3>
+                            <p>Sharing meaningful moments and building lifelong friendships</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item slide-in-up">
+                        <img src="outdoor-learning.jpg" alt="Students learning outdoors in nature" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Learning in Nature</h3>
+                            <p>Torah study surrounded by the beauty of Eretz Yisrael</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item slide-in-right">
+                        <img src="graduation.jpg" alt="Students at graduation ceremony" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Growth & Achievement</h3>
+                            <p>Celebrating milestones and personal development</p>
                         </div>
                     </div>
                 </div>
@@ -177,18 +264,23 @@
         <section id="contact" class="contact-section">
             <div class="container">
                 <div class="contact-content slide-in-up">
-                    <h2 data-en="Partner With Us" data-he="היו שותפים שלנו">היו שותפים שלנו</h2>
-                    <p data-en="Join us in building exceptional facilities for Torah education and character development." data-he="הצטרפו אלינו בבניית מתקנים יוצאי דופן לחינוך תורני ופיתוח אופי.">הצטרפו אלינו בבניית מתקנים יוצאי דופן לחינוך תורני ופיתוח אופי.</p>
+                    <h2>היו שותפים שלנו</h2>
+                    <p>הצטרפו אלינו בבניית מתקנים יוצאי דופן לחינוך תורני ופיתוח אופי.</p>
                     <div class="contact-info">
                         <div class="contact-item slide-in-left">
-                            <h4 data-en="Development Office" data-he="משרד פיתוח">משרד פיתוח</h4>
-                            <p><span data-en="Director:" data-he="מנהל:">מנהל:</span> ידידיה דרשן</p>
-                            <p><span data-en="Email:" data-he="מייל:">מייל:</span> yedidya.makor.c@gmail.com</p>
-                            <p><span data-en="Phone:" data-he="טלפון:">טלפון:</span> +972-54-348-8240</p>
+                            <div class="contact-person">
+                                <img src="my image.jpg" alt="Yedidya Darshan" class="contact-photo">
+                                <div class="contact-details">
+                                    <h4>משרד פיתוח</h4>
+                                    <p><span>מנהל:</span> <span>ידידיה דרשן</span></p>
+                                    <p><span>מייל:</span> <a href="mailto:yedidya.makor.c@gmail.com" style="color: white; text-decoration: underline;">yedidya.makor.c@gmail.com</a></p>
+                                    <p><span>טלפון:</span> <a href="tel:+972543488240" style="color: white; text-decoration: underline;">+972-54-348-8240</a></p>
+                                </div>
+                            </div>
                         </div>
                         <div class="contact-item slide-in-right">
-                            <h4 data-en="Visit Our New Campus" data-he="בקרו בקמפוס החדש שלנו">בקרו בקמפוס החדש שלנו</h4>
-                            <p data-en="Makor Chaim Institutions<br>Neve Daniel Educational Center<br>P.O. Box 27<br>Neve Daniel 9090900, Israel" data-he="מוסדות מקור חיים<br>מרכז חינוכי נווה דניאל<br>ת.ד. 27<br>נווה דניאל 9090900, ישראל">מוסדות מקור חיים<br>מרכז חינוכי נווה דניאל<br>ת.ד. 27<br>נווה דניאל 9090900, ישראל</p>
+                            <h4>בקרו בקמפוס החדש שלנו</h4>
+                            <p>מוסדות מקור חיים<br>מרכז חינוכי נווה דניאל<br>ת.ד. 27<br>נווה דניאל 9090900, ישראל</p>
                         </div>
                     </div>
                 </div>
@@ -211,7 +303,316 @@
             <p>&copy; 2025 Makor Chaim Institutions. All rights reserved.</p>
         </div>
     </footer>
+    en: {
+        // Header
+        yeshiva_name: "Makor Chaim Yeshiva",
+        tagline: "Building Our Future Together",
+        
+        // Navigation
+        home: "Home",
+        message: "Rosh Yeshiva's Message",
+        story: "Our Story",
+        projects: "Current Projects",
+        about: "About",
+        gallery: "Gallery",
+        contact: "Contact",
+        
+        // Hero
+        hero_title: "Makor Chaim - Source of Life",
+        hero_subtitle: "Building our new campus in Gush Etzion where the Path of the Sons meets the Way of our Fathers",
+        cta_button: "Support Our Vision",
+        
+        // Rabbi Message
+        rav_title: "A Message from Rabbi Dov Zinger",
+        
+        // Video
+        video_title: "Our Story in Song",
+        video_subtitle: "Experience the spirit and soul of Makor Chaim Yeshiva through our latest music video",
+        video_description: "This heartfelt music video captures the essence of our yeshiva - the dedication to learning, the warmth of our community, and the growth of our students.",
+        
+        // Projects
+        projects_title: "Current Projects",
+        projects_subtitle: "Building tomorrow's leaders requires exceptional facilities today",
+        
+        // About
+        about_title: "About Makor Chaim Yeshiva",
+        
+        // Gallery
+        gallery_title: "Life at Makor Chaim",
+        gallery_subtitle: "Experience the vibrant community of learning, growth, and friendship",
+        
+        // Contact
+        contact_title: "Partner With Us",
+        contact_subtitle: "Join us in building exceptional facilities for Torah education and character development."
+    },
+    he: {
+        // Header
+        yeshiva_name: "ישיבת מקור חיים",
+        tagline: "בונים יחד את עתידנו",
+        
+        // Navigation
+        home: "בית",
+        message: "מסר ראש הישיבה",
+        story: "הסיפור שלנו",
+        projects: "פרויקטים נוכחיים",
+        about: "אודות",
+        gallery: "גלריה",
+        contact: "צור קשר",
+        
+        // Hero
+        hero_title: 'מקור חיים - "מקור החיים"',
+        hero_subtitle: "בונים את הקמפוס החדש שלנו בגוש עציון, שם דרך הבנים פוגשת דרך האבות",
+        cta_button: "תמכו בחזון שלנו",
+        
+        // Rabbi Message
+        rav_title: "מסר מהרב דוב זינגר",
+        
+        // Video
+        video_title: "הסיפור שלנו בשיר",
+        video_subtitle: "חוו את הרוח והנשמה של ישיבת מקור חיים דרך הקליפ המוזיקלי החדש שלנו",
+        video_description: "הקליפ המוזיקלי המרגש הזה תופס את המהות של הישיבה שלנו - המסירות ללימוד, החמימות של הקהילה שלנו והצמיחה של התלמידים שלנו.",
+        
+        // Projects
+        projects_title: "פרויקטים נוכחיים",
+        projects_subtitle: "בניית מנהיגי המחר דורשת מתקנים יוצאי דופן היום",
+        
+        // About
+        about_title: "אודות ישיבת מקור חיים",
+        
+        // Gallery
+        gallery_title: "החיים במקור חיים",
+        gallery_subtitle: "חוו את הקהילה התוססת של למידה, צמיחה וידידות",
+        
+        // Contact
+        contact_title: "היו שותפים שלנו",
+        contact_subtitle: "הצטרפו אלינו בבניית מתקנים יוצאי דופן לחינוך תורני ופיתוח אופי."
+    }
+};
 
-    <script src="script.js"></script>
+// Switch language function
+function switchLanguage(lang) {
+    currentLanguage = lang;
+    const body = document.body;
+    const html = document.documentElement;
+    
+    // Update language attributes
+    if (lang === 'he') {
+        html.setAttribute('lang', 'he');
+        html.setAttribute('dir', 'rtl');
+        body.classList.add('rtl');
+        body.style.fontFamily = "'Assistant', 'Open Sans', sans-serif";
+    } else {
+        html.setAttribute('lang', 'en');
+        html.setAttribute('dir', 'ltr');
+        body.classList.remove('rtl');
+        body.style.fontFamily = "'Open Sans', sans-serif";
+    }
+    
+    // Update language toggle buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    
+    // Update all translatable content
+    updateContent();
+}
+
+// Update page content
+function updateContent() {
+    const t = translations[currentLanguage];
+    
+    // Header
+    updateElement('header h1', t.yeshiva_name);
+    updateElement('.tagline', t.tagline);
+    
+    // Navigation
+    updateElement('[href="#home"]', t.home);
+    updateElement('[href="#message"]', t.message);
+    updateElement('[href="#video"]', t.story);
+    updateElement('[href="#projects"]', t.projects);
+    updateElement('[href="#about"]', t.about);
+    updateElement('[href="#gallery"]', t.gallery);
+    updateElement('[href="#contact"]', t.contact);
+    
+    // Hero
+    updateElement('.hero-title', t.hero_title);
+    updateElement('.hero-subtitle', t.hero_subtitle);
+    updateElement('.cta-button', t.cta_button);
+    
+    // Rabbi Message
+    updateElement('.rav-title', t.rav_title);
+    
+    // Video
+    updateElement('#video .section-title', t.video_title);
+    updateElement('#video .section-subtitle', t.video_subtitle);
+    updateElement('.video-description p', t.video_description);
+    
+    // Projects
+    updateElement('#projects .section-title', t.projects_title);
+    updateElement('#projects .section-subtitle', t.projects_subtitle);
+    
+    // About
+    updateElement('#about h2', t.about_title);
+    
+    // Gallery
+    updateElement('#gallery .section-title', t.gallery_title);
+    updateElement('#gallery .section-subtitle', t.gallery_subtitle);
+    
+    // Contact
+    updateElement('#contact h2', t.contact_title);
+    updateElement('#contact > .container > .contact-content > p', t.contact_subtitle);
+}
+
+// Helper function to update element content
+function updateElement(selector, content) {
+    const element = document.querySelector(selector);
+    if (element && content) {
+        element.textContent = content;
+    }
+}
+
+// Animation observer
+function observeElements() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    });
+
+    document.querySelectorAll('.slide-in-up, .slide-in-left, .slide-in-right, .fade-in-up').forEach(el => {
+        observer.observe(el);
+    });
+}
+
+// Project modal functions
+function openProjectDetails(projectType) {
+    const modal = document.getElementById('projectModal');
+    const modalContent = document.getElementById('modalContent');
+    
+    let content = '';
+    
+    if (projectType === 'gym') {
+        content = `
+            <h2>Student Fitness & Wellness Center</h2>
+            <div class="modal-project-details">
+                <img src="gym1.png" alt="Gym Design" style="width: 100%; max-width: 600px; margin-bottom: 20px;">
+                <p>A state-of-the-art gymnasium and fitness facility to promote physical wellness alongside spiritual growth.</p>
+                <div class="modal-stats">
+                    <div class="modal-stat">
+                        <span class="modal-stat-number">5,000</span>
+                        <span class="modal-stat-label">sq ft</span>
+                    </div>
+                    <div class="modal-stat">
+                        <span class="modal-stat-number">150+</span>
+                        <span class="modal-stat-label">students served</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    } else if (projectType === 'dorms') {
+        content = `
+            <h2>Modern Student Housing Complex</h2>
+            <div class="modal-project-details">
+                <img src="dorms1.png" alt="Dormitory Design" style="width: 100%; max-width: 600px; margin-bottom: 20px;">
+                <p>Comfortable and inspiring dormitories designed to foster community and create the perfect environment for Torah study.</p>
+                <div class="modal-stats">
+                    <div class="modal-stat">
+                        <span class="modal-stat-number">120</span>
+                        <span class="modal-stat-label">beds</span>
+                    </div>
+                    <div class="modal-stat">
+                        <span class="modal-stat-number">24/7</span>
+                        <span class="modal-stat-label">study access</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    
+    modalContent.innerHTML = content;
+    modal.style.display = 'block';
+}
+
+function closeProjectDetails() {
+    document.getElementById('projectModal').style.display = 'none';
+}
+
+// Image error handling
+function handleImageError(img, fallbackText) {
+    img.style.display = 'none';
+    const parent = img.parentElement;
+    if (parent && !parent.querySelector('.image-placeholder')) {
+        const placeholder = document.createElement('div');
+        placeholder.className = 'image-placeholder';
+        placeholder.textContent = fallbackText;
+        placeholder.style.cssText = `
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0;
+            color: #666;
+            height: 200px;
+            font-size: 14px;
+            text-align: center;
+            border-radius: 8px;
+        `;
+        parent.appendChild(placeholder);
+    }
+}
+
+// Initialize everything
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded - initializing inline script');
+    
+    // Set up language toggle buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            switchLanguage(btn.getAttribute('data-lang'));
+        });
+    });
+    
+    // Initialize animations
+    observeElements();
+    
+    // Set up modal close events
+    window.addEventListener('click', (event) => {
+        const modal = document.getElementById('projectModal');
+        if (event.target === modal) {
+            closeProjectDetails();
+        }
+    });
+    
+    // Set up image error handling
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('error', () => {
+            if (img.id === 'rav-photo') {
+                handleImageError(img, 'Rabbi Photo Coming Soon');
+            } else if (img.id === 'gym-image') {
+                handleImageError(img, 'Gym Design Concept');
+            } else if (img.id === 'dorms-image') {
+                handleImageError(img, 'Dormitory Design Concept');
+            } else if (img.classList.contains('gallery-image')) {
+                handleImageError(img, 'Photo Coming Soon');
+            } else if (img.classList.contains('contact-photo')) {
+                handleImageError(img, 'Contact Photo');
+            } else if (img.classList.contains('logo-image')) {
+                handleImageError(img, 'Makor Chaim Logo');
+            }
+        });
+    });
+});
+    </script>
+    
+    <!-- Loading Animation Script -->
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+    
+    <!-- Single consolidated script with translations and functionality -->
+    <script src="scripts/main.js" defer></script>
 </body>
 </html>

@@ -1,8 +1,85 @@
-# Mekor Chaim Yeshiva - General Brochure Website
+# Makor Chaim Yeshiva - Fundraising Website
 
-A professional fundraising brochure website showcasing current projects at Mekor Chaim Yeshiva.
+A professional bilingual (Hebrew/English) fundraising website for Makor Chaim Yeshiva built with modern web technologies.
 
-## Features
+## 🌐 Internationalization System
+
+This website uses a clean internationalization system similar to Android's approach, with all text stored in separate JSON files for easy translation and management.
+
+### Language Files
+
+- **`languages/en.json`** - All English translations
+- **`languages/he.json`** - All Hebrew translations
+
+### How to Edit Text
+
+Instead of editing HTML directly, simply modify the JSON files:
+
+#### Example: Changing the hero title
+```json
+// In languages/en.json
+{
+  "hero": {
+    "title": "Makor Chaim - Source of Life",   // ← Edit this
+    "subtitle": "Building our new campus...",  // ← Or this
+    "cta_button": "Support Our Vision"         // ← Or this
+  }
+}
+```
+
+```json
+// In languages/he.json  
+{
+  "hero": {
+    "title": "מקור חיים - \"מקור החיים\"",      // ← Edit this
+    "subtitle": "בונים את הקמפוס החדש...",      // ← Or this
+    "cta_button": "תמכו בחזון שלנו"           // ← Or this
+  }
+}
+```
+
+### Adding New Text
+
+1. Add the text to both `en.json` and `he.json` files
+2. Update `script.js` to include the new element selector
+3. The text will automatically update when switching languages
+
+### Benefits of This System
+
+✅ **Easy Translation** - All text in one place per language  
+✅ **Clean HTML** - No cluttered data attributes  
+✅ **Maintainable** - Easy to add new languages  
+✅ **Professional** - Industry-standard approach  
+✅ **Fallback Safe** - Falls back gracefully if JSON fails to load  
+
+## 📝 Content Still Needed
+
+**Rabbi Dov Zinger's Message** - Update in both language files:
+- `rav_message.content_paragraph_1` (English & Hebrew)
+- `rav_message.content_paragraph_2` (English & Hebrew)
+
+## 🖼️ Images to Replace
+
+The following placeholder images should be replaced with real photos:
+
+- `dorms1.png` - Dormitory design/architectural concept
+- `students-learning.jpg` - Students studying in Beit Midrash
+- `campus-view.jpg` - Beautiful campus landscape
+- `students-discussion.jpg` - Students in chavruta learning
+- `community-meal.jpg` - Students sharing Shabbat meal
+- `outdoor-learning.jpg` - Torah study in nature
+- `graduation.jpg` - Graduation ceremony
+
+## 💡 Quick Tips
+
+1. **To translate**: Edit the JSON files in the `languages/` folder
+2. **To add content**: Update the appropriate section in both language files
+3. **To change styling**: Edit `styles.css`
+4. **To add features**: Modify `script.js` and add corresponding translations
+
+---
+
+© 2025 Makor Chaim Institutions. All rights reserved.
 
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
 - **Interactive Project Showcase**: Click on project cards to view detailed information
