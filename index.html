@@ -2,10 +2,11 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     <title>Makor Chaim Yeshiva - Building Our Future</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600&family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="section-styles.css">
     <!-- Critical translations variable in head -->
     <script>
     // Pre-define translations variable - will be used by main.js
@@ -22,6 +23,11 @@
                     <p class="tagline">בונים יחד את עתידנו</p>
                 </div>
             </div>
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="nav">
                 <a href="#contact" class="nav-link">צור קשר</a>
                 <a href="#gallery" class="nav-link">גלריה</a>
@@ -57,7 +63,7 @@
 
         <!-- Rav Dov Message Section -->
         <section id="message" class="rav-message-section">
-            <div class="container">
+            <div class="container-narrow section-contained">
                 <div class="rav-message-content slide-in-up">
                     <div class="rav-photo-container">
                         <img src="rav-dov.jpg" alt="Rabbi Dov Zinger" class="rav-photo" id="rav-photo">
@@ -81,7 +87,7 @@
 
         <!-- Music Video Section -->
         <section id="video" class="video-section">
-            <div class="container">
+            <div class="container-narrow">
                 <div class="video-content slide-in-up">
                     <div class="video-header">
                         <h2 class="section-title">Our Story in Song</h2>
@@ -107,7 +113,7 @@
 
         <!-- Projects Section -->
         <section id="projects" class="projects-section">
-            <div class="container">
+            <div class="container-wide">
                 <div class="section-header slide-in-up">
                     <h2 class="section-title">Current Projects</h2>
                     <p class="section-subtitle">Building tomorrow's leaders requires exceptional facilities today</p>
@@ -175,7 +181,7 @@
 
         <!-- About Section -->
         <section id="about" class="about-section">
-            <div class="container">
+            <div class="container-narrow section-contained">
                 <div class="about-content slide-in-up">
                     <div class="about-text">
                         <h2>About Makor Chaim Yeshiva</h2>
@@ -202,7 +208,7 @@
 
         <!-- Student Life Gallery Section -->
         <section id="gallery" class="gallery-section">
-            <div class="container">
+            <div class="container-wide">
                 <div class="section-header slide-in-up">
                     <h2 class="section-title">Life at Makor Chaim</h2>
                     <p class="section-subtitle">Experience the vibrant community of learning, growth, and friendship</p>
@@ -262,7 +268,7 @@
 
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
-            <div class="container">
+            <div class="container-narrow section-contained">
                 <div class="contact-content slide-in-up">
                     <h2>היו שותפים שלנו</h2>
                     <p>הצטרפו אלינו בבניית מתקנים יוצאי דופן לחינוך תורני ופיתוח אופי.</p>

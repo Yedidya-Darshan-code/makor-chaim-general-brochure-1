@@ -3,6 +3,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded - script running');
     
+    // Mark document as loaded to remove loading screen
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 800); // Short delay for loading animation
+    
     // Translations object - ALL text in one place (like Android strings)
     const translations = {
         en: {
@@ -307,6 +312,123 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Scroll animations for sections
+    const setupScrollAnimations = () => {
+        // Get all sections to animate
+        const sections = document.querySelectorAll('section');
+        
+        // Create the Intersection Observer
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                // When section is in view
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    
+                    // Add animation order to children for staggered animations
+                    const animatedChildren = entry.target.querySelectorAll('.project-card, .about-point, .gallery-item, .contact-item');
+                    animatedChildren.forEach((child, index) => {
+                        child.style.setProperty('--animation-order', index);
+                    });
+                    
+                    // Optional: Unobserve if you want the animation to occur only once
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 }); // Trigger when 20% of the section is visible
+        
+        // Observe each section
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+    };
+    
+    // Navigation highlighting based on current section
+    const setupNavHighlighting = () => {
+        // Get all sections and navigation links
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        // Header transformation on scroll
+        const header = document.querySelector('.header');
+        let lastScrollTop = 0;
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Add compact class when scrolling down
+            if (scrollTop > 50) {
+                header.classList.add('compact');
+            } else {
+                header.classList.remove('compact');
+            }
+            
+            // Optional: Hide header when scrolling down, show when scrolling up
+            if (scrollTop > lastScrollTop && scrollTop > 200) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+        
+        // Create the Intersection Observer
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // When section is in view
+                if (entry.isIntersecting) {
+                    // Get the id of the section in view
+                    const id = entry.target.getAttribute('id');
+                    
+                    // Remove active class from all nav links
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    
+                    // Add active class to the corresponding nav link
+                    const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            });
+        }, { 
+            threshold: 0.6, // Trigger when 60% of the section is visible
+            rootMargin: '-100px 0px' // Adjust for fixed header
+        });
+        
+        // Observe each section
+        sections.forEach(section => {
+            navObserver.observe(section);
+        });
+    };
+    
+    // Call animation and navigation setup functions
+    setupScrollAnimations();
+    setupNavHighlighting();
+    
+    // Mobile menu functionality
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('.nav');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            nav.classList.toggle('open');
+            document.body.classList.toggle('menu-open');
+        });
+        
+        // Close menu when clicking on a nav link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                nav.classList.remove('open');
+                document.body.classList.remove('menu-open');
+            });
+        });
+    }
     
     console.log('Script initialization complete');
 });
