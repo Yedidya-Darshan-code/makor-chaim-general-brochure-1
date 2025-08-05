@@ -43,15 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
             rav_name: "Rabbi Dov Zinger",
             rav_position: "Rosh Yeshiva and Co-founder",
             
-            // Rabbi achievements
-            rav_achievement_founder: "Co-founder",
-            rav_achievement_educator: "Experienced Educator",
-            
-            // About highlights
-            about_highlight_torah: "Advanced Torah Studies",
-            about_highlight_community: "Community Involvement", 
-            about_highlight_innovation: "Innovative Education",
-            
             // Video
             video_title: "Our Story in Song",
             video_subtitle: "Experience the spirit and soul of Makor Chaim Yeshiva through our latest music video",
@@ -101,7 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
             contact_subtitle: "Join us in building exceptional facilities for Torah education and character development.",
             development_office: "Development Office",
             director: "Director",
-            director_name: "Yedidya Darshan",
             email: "Email",
             phone: "Phone",
             visit_campus: "Visit Our New Campus",
@@ -139,15 +129,6 @@ document.addEventListener('DOMContentLoaded', function() {
             rav_signature: "בברכה,",
             rav_name: "הרב דוב זינגר",
             rav_position: "ראש ישיבה ומייסד שותף",
-            
-            // Rabbi achievements  
-            rav_achievement_founder: "מייסד שותף",
-            rav_achievement_educator: "מחנך מנוסה",
-            
-            // About highlights
-            about_highlight_torah: "לימודי תורה מתקדמים",
-            about_highlight_community: "מעורבות חברתית",
-            about_highlight_innovation: "חינוך חדשני",
             
             // Video
             video_title: "הסיפור שלנו בשיר",
@@ -198,7 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
             contact_subtitle: "הצטרפו אלינו בבניית מתקנים יוצאי דופן לחינוך תורני ופיתוח אופי.",
             development_office: "משרד פיתוח",
             director: "מנהל",
-            director_name: "ידידיה דרשן",
             email: "מייל",
             phone: "טלפון",
             visit_campus: "בקרו בקמפוס החדש שלנו",
@@ -226,7 +206,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (scrollText) scrollText.textContent = t.scroll_text;
 
             // Rabbi message section
-            updateRabbiMessageSection(t);
+            const ravTitle = document.querySelector('.rav-title');
+            if (ravTitle) ravTitle.textContent = t.rav_title;
 
             // Video section
             const videoTitle = document.querySelector('#video .section-title');
@@ -256,43 +237,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } catch (error) {
             console.error('Error updating content:', error);
         }
-    }
-
-    // Update Rabbi Message Section
-    function updateRabbiMessageSection(t) {
-        // Rabbi credentials
-        const ravName = document.querySelector('.rav-credentials .rav-name');
-        const ravPosition = document.querySelector('.rav-credentials .rav-position');
-        
-        if (ravName) ravName.textContent = t.rav_name;
-        if (ravPosition) ravPosition.textContent = t.rav_position;
-        
-        // Achievement labels with specific classes
-        const achievementFounder = document.querySelector('.achievement-founder');
-        const achievementEducator = document.querySelector('.achievement-educator');
-        
-        if (achievementFounder) achievementFounder.textContent = t.rav_achievement_founder;
-        if (achievementEducator) achievementEducator.textContent = t.rav_achievement_educator;
-        
-        // Message header
-        const ravTitle = document.querySelector('.rav-title');
-        if (ravTitle) ravTitle.textContent = t.rav_title;
-        
-        // Message paragraphs
-        const messageParagraphs = document.querySelectorAll('.message-paragraph');
-        if (messageParagraphs.length >= 2) {
-            messageParagraphs[0].textContent = t.rav_text_1;
-            messageParagraphs[1].textContent = t.rav_text_2;
-        }
-        
-        // Signature
-        const signatureText = document.querySelector('.rav-signature .signature-text');
-        const signatureSpan = document.querySelector('.signature-name span');
-        const signatureStrong = document.querySelector('.signature-name strong');
-        
-        if (signatureText) signatureText.textContent = t.rav_closing;
-        if (signatureSpan) signatureSpan.textContent = t.rav_signature;
-        if (signatureStrong) signatureStrong.textContent = t.rav_name;
     }
 
     // Specialized update functions for complex sections
@@ -353,15 +297,6 @@ document.addEventListener('DOMContentLoaded', function() {
             aboutStats[1].textContent = t.years_innovation;
             aboutStats[2].textContent = t.new_campus;
         }
-        
-        // Update highlight items with specific classes
-        const highlightTorah = document.querySelector('.highlight-torah');
-        const highlightCommunity = document.querySelector('.highlight-community');
-        const highlightInnovation = document.querySelector('.highlight-innovation');
-        
-        if (highlightTorah) highlightTorah.textContent = t.about_highlight_torah;
-        if (highlightCommunity) highlightCommunity.textContent = t.about_highlight_community;
-        if (highlightInnovation) highlightInnovation.textContent = t.about_highlight_innovation;
     }
 
     function updateGallerySection(t) {
@@ -399,15 +334,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const contactOfficeTitle = document.querySelector('#contact .contact-details h4');
         const contactLabels = document.querySelectorAll('#contact .contact-details p span:first-child');
         const contactVisitTitle = document.querySelector('#contact .contact-item:last-child h4');
-        const directorName = document.querySelector('.director-name');
-        const contactPhoto = document.querySelector('.contact-photo');
         
         if (contactTitle) contactTitle.textContent = t.contact_title;
         if (contactSubtitle) contactSubtitle.textContent = t.contact_subtitle;
         if (contactOfficeTitle) contactOfficeTitle.textContent = t.development_office;
         if (contactVisitTitle) contactVisitTitle.textContent = t.visit_campus;
-        if (directorName) directorName.textContent = t.director_name;
-        if (contactPhoto) contactPhoto.alt = t.director_name;
         
         if (contactLabels.length >= 3) {
             contactLabels[0].textContent = t.director + ':';
@@ -558,109 +489,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Enhanced animated counter function with professional effects
-    function animateCounter(element, start, end, duration, suffix = '') {
-        const startTime = performance.now();
-        const isYear = end >= 1900; // Special handling for years
-        
-        // Add counting class for visual effects
-        element.classList.add('counting');
-        
-        function updateCounter(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            
-            // Use easeOutCubic for smooth animation
-            const easeProgress = 1 - Math.pow(1 - progress, 3);
-            const current = Math.floor(start + (end - start) * easeProgress);
-            
-            if (isYear) {
-                element.textContent = current.toString();
-            } else {
-                element.textContent = current + suffix;
-            }
-            
-            if (progress < 1) {
-                requestAnimationFrame(updateCounter);
-            } else {
-                // Ensure we end with the exact target number
-                element.textContent = end + suffix;
-                element.classList.remove('counting');
-                
-                // Add completion glow effect
-                element.style.textShadow = '0 0 20px rgba(39, 211, 245, 0.8)';
-                setTimeout(() => {
-                    element.style.textShadow = '';
-                }, 1000);
-            }
-        }
-        
-        requestAnimationFrame(updateCounter);
-    }
-    
-    // Enhanced setup for animated counters with better targeting
-    function setupAnimatedCounters() {
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counter = entry.target;
-                    if (counter.dataset.animated) return; // Already animated
-                   
-                    const text = counter.textContent.trim();
-                    let targetNumber = 0;
-                    let suffix = '';
-                    
-                    // Parse different number formats with better logic
-                    if (text === '1985') {
-                        targetNumber = 1985;
-                    } else if (text === '2025') {
-                        targetNumber = 2025;
-                    } else if (text.includes('+')) {
-                        targetNumber = parseInt(text.replace('+', ''));
-                        suffix = '+';
-                    } else if (text.includes('/')) {
-                        // Handle "24/7" format - animate differently
-                        let numbers = text.split('/');
-                        if (numbers.length === 2) {
-                            let first = parseInt(numbers[0]);
-                            let second = parseInt(numbers[1]);
-                            // Animate the first part, then add the second
-                            animateCounter(counter, 0, first, 1500, `/${second}`);
-                            counter.dataset.animated = 'true';
-                            counterObserver.unobserve(counter);
-                            return;
-                        }
-                    } else if (text === 'חדש') {
-                        // Hebrew "new" - just add a sparkle effect
-                        counter.style.animation = 'pulse 2s ease-in-out infinite';
-                        counter.dataset.animated = 'true';
-                        counterObserver.unobserve(counter);
-                        return;
-                    } else {
-                        targetNumber = parseInt(text) || 0;
-                    }
-                    
-                    // Start animation with random delay for more natural feel
-                    const delay = Math.random() * 500;
-                    setTimeout(() => {
-                        animateCounter(counter, 0, targetNumber, 2500 + (Math.random() * 1000), suffix);
-                    }, delay);
-                    
-                    counter.dataset.animated = 'true';
-                    counterObserver.unobserve(counter);
-                }
-            });
-        }, {
-            threshold: 0.7, // Trigger when 70% visible for better timing
-            rootMargin: '-20px'
-        });
-        
-        // Observe all stat numbers with better targeting
-        document.querySelectorAll('.stat-number, .counter').forEach(counter => {
-            counterObserver.observe(counter);
-        });
-    }
-    
     // Scroll animations for sections
     const setupScrollAnimations = () => {
         // Get all sections to animate
@@ -697,29 +525,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize everything
     setupScrollAnimations();
     setupNavHighlighting();
-    setupAnimatedCounters(); // Add counter animations
-    
-    // Set initial language state properly
-    updateAllContent();
-    
-    // Update header content on load
-    const t = translations[currentLanguage];
-    const logoText = document.querySelector('.logo-text h1');
-    const tagline = document.querySelector('.tagline');
-    if (logoText) logoText.textContent = t.yeshiva_name;
-    if (tagline) tagline.textContent = t.tagline;
-    
-    // Navigation links on load
-    const initialNavLinks = document.querySelectorAll('.nav-link');
-    if (initialNavLinks.length >= 7) {
-        initialNavLinks[0].textContent = t.contact;
-        initialNavLinks[1].textContent = t.gallery;
-        initialNavLinks[2].textContent = t.about;
-        initialNavLinks[3].textContent = t.projects;
-        initialNavLinks[4].textContent = t.story;
-        initialNavLinks[5].textContent = t.message;
-        initialNavLinks[6].textContent = t.home;
-    }
     
     // Mobile menu functionality
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');

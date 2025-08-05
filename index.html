@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600&family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="section-styles.css">
+    <link rel="stylesheet" href="professional-additions.css">
     <!-- Critical translations variable in head -->
     <script>
     // Pre-define translations variable - will be used by main.js
@@ -17,7 +18,7 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="mekor chaim logo turqiose.png" alt="Makor Chaim Yeshiva Logo" class="logo-image">
+                <img src="mekor chaim logo turqiose.png" alt="לוגו ישיבת מקור חיים" class="logo-image">
                 <div class="logo-text">
                     <h1>ישיבת מקור חיים</h1>
                     <p class="tagline">בונים יחד את עתידנו</p>
@@ -49,7 +50,7 @@
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1 class="hero-title" data-he='מקור חיים - "מקור החיים"'>מקור חיים - "מקור החיים"</h1>
+                <h1 class="hero-title">מקור חיים - "מקור החיים"</h1>
                 <p class="hero-subtitle">בונים את הקמפוס החדש שלנו בגוש עציון, שם דרך הבנים פוגשת דרך האבות</p>
                 <a href="#projects" class="cta-button">תמכו בחזון שלנו</a>
             </div>
@@ -63,22 +64,51 @@
 
         <!-- Rav Dov Message Section -->
         <section id="message" class="rav-message-section">
-            <div class="container-narrow section-contained">
-                <div class="rav-message-content slide-in-up">
-                    <div class="rav-photo-container">
-                        <img src="rav-dov.jpg" alt="Rabbi Dov Zinger" class="rav-photo" id="rav-photo">
-                        <div class="rav-photo-frame"></div>
-                    </div>
-                    <div class="rav-message-text">
-                        <h2 class="rav-title">מסר מהרב דוב זינגר</h2>
-                        <div class="rav-message-content-text">
-                            <p>[כאן יופיע מסר הרב דוב זינגר על הקמפוס החדש והפרויקטים הנוכחיים - אנא ספק את הטקסט בעברית]</p>
-                            <p>[פסקה שנייה על החזון לתורה, עבודה וגמילות חסדים - אנא ספק את הטקסט בעברית]</p>
+            <div class="container">
+                <div class="rav-message-wrapper">
+                    <!-- Left side: Rabbi photo and credentials -->
+                    <div class="rav-visual">
+                        <div class="rav-photo-container">
+                            <img src="rav-dov.jpg" alt="הרב דוב זינגר" class="rav-photo" id="rav-photo">
+                            <div class="rav-photo-frame"></div>
+                            <div class="rav-photo-glow"></div>
                         </div>
-                        <div class="rav-signature">
-                            <p class="signature-text">בברכה,</p>
-                            <p class="signature-name">הרב דוב זינגר</p>
-                            <p class="signature-title">ראש ישיבה ומייסד שותף</p>
+                        <div class="rav-credentials">
+                            <h3 class="rav-name">הרב דוב זינגר</h3>
+                            <p class="rav-position">ראש ישיבה ומייסד שותף</p>
+                            <div class="rav-achievements">
+                                <div class="achievement">
+                                    <span class="achievement-icon">🎓</span>
+                                    <span class="achievement-founder">מייסד שותף</span>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-icon">📚</span>
+                                    <span class="achievement-educator">מחנך מנוסה</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right side: Message content -->
+                    <div class="rav-message-content">
+                        <div class="rav-message-header">
+                            <h2 class="rav-title">מסר מהרב דוב זינגר</h2>
+                            <div class="quote-mark">"</div>
+                        </div>
+                        <div class="rav-message-text">
+                            <p class="message-paragraph slide-in-right" style="animation-delay: 0.3s;">
+                                [כאן יופיע מסר הרב דוב זינגר על הקמפוס החדש והפרויקטים הנוכחיים - אנא ספק את הטקסט בעברית]
+                            </p>
+                            <p class="message-paragraph slide-in-right" style="animation-delay: 0.5s;">
+                                [פסקה שנייה על החזון לתורה, עבודה וגמילות חסדים - אנא ספק את הטקסט בעברית]
+                            </p>
+                        </div>
+                        <div class="rav-signature slide-in-right" style="animation-delay: 0.7s;">
+                            <p class="signature-text">תודה מקרב לב על תמיכתכם,</p>
+                            <div class="signature-name">
+                                <span>בברכה,</span>
+                                <strong>הרב דוב זינגר</strong>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -90,21 +120,21 @@
             <div class="container-narrow">
                 <div class="video-content slide-in-up">
                     <div class="video-header">
-                        <h2 class="section-title">Our Story in Song</h2>
-                        <p class="section-subtitle">Experience the spirit and soul of Makor Chaim Yeshiva through our latest music video</p>
+                        <h2 class="section-title">הסיפור שלנו בשיר</h2>
+                        <p class="section-subtitle">חוו את הרוח והנשמה של ישיבת מקור חיים דרך הקליפ החדש שלנו</p>
                     </div>
                     <div class="video-container">
                         <div class="video-wrapper">
                             <iframe 
                                 src="https://www.youtube.com/embed/dskyz8n8ZUw?rel=0&modestbranding=1&showinfo=0" 
-                                title="Makor Chaim Yeshiva Music Video" 
+                                title="קליפ מוזיקלי ישיבת מקור חיים" 
                                 frameborder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                 allowfullscreen>
                             </iframe>
                         </div>
                         <div class="video-description">
-                            <p>This heartfelt music video captures the essence of our yeshiva - the dedication to learning, the warmth of our community, and the growth of our students.</p>
+                            <p>הקליפ הנוגע ללב הזה מתאר את מהות הישיבה שלנו - המסירות ללימוד, חמימות הקהילה שלנו וצמיחת התלמידים.</p>
                         </div>
                     </div>
                 </div>
@@ -115,34 +145,34 @@
         <section id="projects" class="projects-section">
             <div class="container-wide">
                 <div class="section-header slide-in-up">
-                    <h2 class="section-title">Current Projects</h2>
-                    <p class="section-subtitle">Building tomorrow's leaders requires exceptional facilities today</p>
+                    <h2 class="section-title">פרויקטים נוכחיים</h2>
+                    <p class="section-subtitle">בניית מנהיגי המחר דורשת מתקנים יוצאי דופן היום</p>
                 </div>
 
                 <div class="projects-grid">
                     <!-- Gym Project -->
                     <div class="project-card slide-in-left" onclick="openProjectDetails('gym')">
                         <div class="project-image">
-                            <img src="gym1.png" alt="Makor Chaim Yeshiva Gym - Interior Design Concept" id="gym-image">
+                            <img src="gym1.png" alt="חדר כושר ישיבת מקור חיים - קונספט עיצוב פנים" id="gym-image">
                             <div class="project-overlay">
                                 <div class="project-overlay-content">
-                                    <h3>Modern Fitness Center</h3>
-                                    <p>Click to learn more</p>
-                                    <div class="arrow">→</div>
+                                    <h3>מרכז כושר מודרני</h3>
+                                    <p>לחץ למידע נוסף</p>
+                                    <div class="arrow">←</div>
                                 </div>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title">Student Fitness & Wellness Center</h3>
-                            <p class="project-description">A state-of-the-art gymnasium and fitness facility to promote physical wellness alongside spiritual growth.</p>
+                            <h3 class="project-title">מרכז כושר ובריאות לתלמידים</h3>
+                            <p class="project-description">חדר כושר ומתקן ספורט מתקדם לעידוד בריאות גופנית לצד צמיחה רוחנית.</p>
                             <div class="project-stats">
                                 <div class="stat">
                                     <span class="stat-number">5,000</span>
-                                    <span class="stat-label">sq ft</span>
+                                    <span class="stat-label">רגל מרובע</span>
                                 </div>
                                 <div class="stat">
                                     <span class="stat-number">150+</span>
-                                    <span class="stat-label">students served</span>
+                                    <span class="stat-label">תלמידים</span>
                                 </div>
                             </div>
                         </div>
@@ -151,26 +181,26 @@
                     <!-- Dorms Project -->
                     <div class="project-card slide-in-right" onclick="openProjectDetails('dorms')">
                         <div class="project-image">
-                            <img src="dorms1.png" alt="Makor Chaim Yeshiva Student Dormitories" id="dorms-image">
+                            <img src="dorms1.png" alt="מעונות תלמידים ישיבת מקור חיים" id="dorms-image">
                             <div class="project-overlay">
                                 <div class="project-overlay-content">
-                                    <h3>Student Dormitories</h3>
-                                    <p>Click to learn more</p>
-                                    <div class="arrow">→</div>
+                                    <h3>מעונות תלמידים</h3>
+                                    <p>לחץ למידע נוסף</p>
+                                    <div class="arrow">←</div>
                                 </div>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title">Modern Student Housing Complex</h3>
-                            <p class="project-description">Comfortable and inspiring dormitories designed to foster community and create the perfect environment for Torah study.</p>
+                            <h3 class="project-title">מתקן דיור מודרני לתלמידים</h3>
+                            <p class="project-description">מעונות נוחים ומעוררי השראה המיועדים לטפח קהילה וליצור סביבה מושלמת ללימוד תורה.</p>
                             <div class="project-stats">
                                 <div class="stat">
                                     <span class="stat-number">120</span>
-                                    <span class="stat-label">beds</span>
+                                    <span class="stat-label">מיטות</span>
                                 </div>
                                 <div class="stat">
                                     <span class="stat-number">24/7</span>
-                                    <span class="stat-label">study access</span>
+                                    <span class="stat-label">גישה ללימוד</span>
                                 </div>
                             </div>
                         </div>
@@ -181,25 +211,56 @@
 
         <!-- About Section -->
         <section id="about" class="about-section">
-            <div class="container-narrow section-contained">
-                <div class="about-content slide-in-up">
-                    <div class="about-text">
-                        <h2>About Makor Chaim Yeshiva</h2>
-                        <p>Established in 1985 by the late Rabbi Adin Steinsaltz together with Rabbi Dov Singer, Makor Chaim has been a pioneer in unique educational methods that empower spiritually honest, deep relationships between students and teachers, between man and G-d, and between man and his fellow man.</p>
-                        <p>Our new campus in Gush Etzion, near Neve Daniel, sits where the ancient road of our Patrirachs meets modern Route 60 - truly where the Path of the Sons meets the Way of our Fathers. We seek to restore the balance of Torah, Worship & Acts of Kindness in our students through innovative education.</p>
+            <div class="container">
+                <div class="about-content-wrapper">
+                    <!-- Left side: Image and visual elements -->
+                    <div class="about-visual">
+                        <div class="about-image-container">
+                            <img src="campus-view.jpg" alt="קמפוס ישיבת מקור חיים" class="about-main-image">
+                            <div class="about-image-overlay"></div>
+                        </div>
+                        <div class="about-stats-visual">
+                            <div class="stat-item slide-in-up" style="animation-delay: 0.2s;">
+                                <span class="stat-number counter" data-target="1985">1985</span>
+                                <span class="stat-label">נוסדה</span>
+                            </div>
+                            <div class="stat-item slide-in-up" style="animation-delay: 0.4s;">
+                                <span class="stat-number counter" data-target="40">40+</span>
+                                <span class="stat-label">שנות חדשנות</span>
+                            </div>
+                            <div class="stat-item slide-in-up" style="animation-delay: 0.6s;">
+                                <span class="stat-number counter" data-target="2025">2025</span>
+                                <span class="stat-label">קמפוס בגוש עציון</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="about-stats">
-                        <div class="stat-item slide-in-right" style="animation-delay: 0.2s;">
-                            <span class="stat-number">1985</span>
-                            <span class="stat-label">Founded</span>
-                        </div>
-                        <div class="stat-item slide-in-right" style="animation-delay: 0.4s;">
-                            <span class="stat-number">40+</span>
-                            <span class="stat-label">Years of Innovation</span>
-                        </div>
-                        <div class="stat-item slide-in-right" style="animation-delay: 0.6s;">
-                            <span class="stat-number">NEW</span>
-                            <span class="stat-label">Campus in Gush Etzion</span>
+
+                    <!-- Right side: Text content -->
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h2 class="section-title">אודות ישיבת מקור חיים</h2>
+                            <div class="about-description">
+                                <p class="about-paragraph slide-in-right" style="animation-delay: 0.3s;">
+                                    נוסדה בשנת 1985 על ידי המנוח הרב עדין שטיינזלץ יחד עם הרב דב זינגר, מקור חיים הייתה חלוצה בשיטות חינוכיות ייחודיות המעצימות יחסים עמוקים וכנים רוחנית בين תלמידים למורים, בין האדם לקב"ה ובין אדם לחברו.
+                                </p>
+                                <p class="about-paragraph slide-in-right" style="animation-delay: 0.5s;">
+                                    הקמפוס החדש שלנו בגוש עציון, ליד נווה דניאל, יושב במקום שבו הדרך העתיקה של האבות פוגשת את כביש 60 המודרני - באמת המקום שבו דרך הבנים פוגשת דרך האבות. אנחנו שואפים להחזיר את האיזון של תורה, עבודה וגמילות חסדים בתלמידים שלנו באמצעות חינוך חדשני.
+                                </p>
+                            </div>
+                            <div class="about-highlights slide-in-right" style="animation-delay: 0.7s;">
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">📚</div>
+                                    <span class="highlight-torah">לימודי תורה מתקדמים</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">🤝</div>
+                                    <span class="highlight-community">מעורבות חברתית</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon">🌟</div>
+                                    <span class="highlight-innovation">חינוך חדשני</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -210,56 +271,56 @@
         <section id="gallery" class="gallery-section">
             <div class="container-wide">
                 <div class="section-header slide-in-up">
-                    <h2 class="section-title">Life at Makor Chaim</h2>
-                    <p class="section-subtitle">Experience the vibrant community of learning, growth, and friendship</p>
+                    <h2 class="section-title">החיים במקור חיים</h2>
+                    <p class="section-subtitle">חוו את הקהילה התוססת של למידה, צמיחה וידידות</p>
                 </div>
                 
                 <div class="gallery-grid">
                     <div class="gallery-item slide-in-left">
-                        <img src="students-learning.jpg" alt="Students studying Torah in the Beit Midrash" class="gallery-image">
+                        <img src="students-learning.jpg" alt="תלמידים לומדים תורה בבית המדרש" class="gallery-image">
                         <div class="gallery-overlay">
-                            <h3>Deep Torah Learning</h3>
-                            <p>Students engaged in intensive study in our Beit Midrash</p>
+                            <h3>לימוד תורה עמוק</h3>
+                            <p>תלמידים עוסקים בלימוד אינטנסיבי בבית המדרש שלנו</p>
                         </div>
                     </div>
                     
                     <div class="gallery-item slide-in-up">
-                        <img src="campus-view.jpg" alt="Beautiful view of the Gush Etzion campus" class="gallery-image">
+                        <img src="campus-view.jpg" alt="נוף יפה של הקמפוס בגוש עציון" class="gallery-image">
                         <div class="gallery-overlay">
-                            <h3>Inspiring Campus</h3>
-                            <p>Our stunning location in the heart of Gush Etzion</p>
+                            <h3>קמפוס מעורר השראה</h3>
+                            <p>המיקום המדהים שלנו בלב גוש עציון</p>
                         </div>
                     </div>
                     
                     <div class="gallery-item slide-in-right">
-                        <img src="students-discussion.jpg" alt="Students in animated Torah discussion" class="gallery-image">
+                        <img src="students-discussion.jpg" alt="תלמידים בדיון תורני נמרץ" class="gallery-image">
                         <div class="gallery-overlay">
-                            <h3>Chavruta Learning</h3>
-                            <p>The traditional study partnership that builds deep understanding</p>
+                            <h3>לימוד בחברותא</h3>
+                            <p>השותפות המסורתית בלימוד הבונה הבנה עמוקה</p>
                         </div>
                     </div>
                     
                     <div class="gallery-item slide-in-left">
-                        <img src="community-meal.jpg" alt="Students sharing a Shabbat meal" class="gallery-image">
+                        <img src="community-meal.jpg" alt="תלמידים חולקים סועדת שבת" class="gallery-image">
                         <div class="gallery-overlay">
-                            <h3>Community & Brotherhood</h3>
-                            <p>Sharing meaningful moments and building lifelong friendships</p>
+                            <h3>קהילה ואחווה</h3>
+                            <p>חלוקת רגעים משמעותיים ובניית ידידויות לכל החיים</p>
                         </div>
                     </div>
                     
                     <div class="gallery-item slide-in-up">
-                        <img src="outdoor-learning.jpg" alt="Students learning outdoors in nature" class="gallery-image">
+                        <img src="outdoor-learning.jpg" alt="תלמידים לומדים בחוץ בטבע" class="gallery-image">
                         <div class="gallery-overlay">
-                            <h3>Learning in Nature</h3>
-                            <p>Torah study surrounded by the beauty of Eretz Yisrael</p>
+                            <h3>לימוד בטבע</h3>
+                            <p>לימוד תורה מוקף ביופיה של ארץ ישראל</p>
                         </div>
                     </div>
                     
                     <div class="gallery-item slide-in-right">
-                        <img src="graduation.jpg" alt="Students at graduation ceremony" class="gallery-image">
+                        <img src="graduation.jpg" alt="תלמידים בטקס סיום" class="gallery-image">
                         <div class="gallery-overlay">
-                            <h3>Growth & Achievement</h3>
-                            <p>Celebrating milestones and personal development</p>
+                            <h3>צמיחה והישגים</h3>
+                            <p>חגיגת ציוני דרך והתפתחות אישית</p>
                         </div>
                     </div>
                 </div>
@@ -275,10 +336,10 @@
                     <div class="contact-info">
                         <div class="contact-item slide-in-left">
                             <div class="contact-person">
-                                <img src="my image.jpg" alt="Yedidya Darshan" class="contact-photo">
+                                <img src="my image.jpg" alt="ידידיה דרשן" class="contact-photo">
                                 <div class="contact-details">
                                     <h4>משרד פיתוח</h4>
-                                    <p><span>מנהל:</span> <span>ידידיה דרשן</span></p>
+                                    <p><span>מנהל:</span> <span class="director-name">ידידיה דרשן</span></p>
                                     <p><span>מייל:</span> <a href="mailto:yedidya.makor.c@gmail.com" style="color: white; text-decoration: underline;">yedidya.makor.c@gmail.com</a></p>
                                     <p><span>טלפון:</span> <a href="tel:+972543488240" style="color: white; text-decoration: underline;">+972-54-348-8240</a></p>
                                 </div>
@@ -306,7 +367,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Makor Chaim Institutions. All rights reserved.</p>
+            <p>&copy; 2025 מוסדות מקור חיים. כל הזכויות שמורות.</p>
         </div>
     </footer>
     
