@@ -70,7 +70,22 @@ document.addEventListener('DOMContentLoaded', function() {
             housing_description: "Comfortable and inspiring dormitories designed to foster community and create the perfect environment for Torah study.",
             housing_beds: "beds",
             housing_access: "study access",
+            library_complex: "Advanced Study Center & Library",
+            library_complex_short: "Advanced Library",
+            library_description: "Modern and comfortable library with a rich collection of Torah and wisdom books, designed for deep study and Torah research.",
+            library_books: "books",
+            library_seats: "seats",
             project_cta: "Click to learn more",
+            
+            // Library
+            library_title: "Advanced Library",
+            library_subtitle: "Modern and comfortable learning space designed for deep study and Torah research",
+            library_video_title: "Virtual Library Tour",
+            library_video_desc: "Experience the unique atmosphere of our learning center",
+            library_books_title: "Rich Book Collection",
+            library_books_desc: "Thousands of Torah and wisdom books in one place",
+            library_comfort_title: "Comfortable Seating Areas",
+            library_comfort_desc: "Designed and pleasant environment for extended study",
             
             // About
             about_title: "About Makor Chaim Yeshiva",
@@ -167,6 +182,11 @@ document.addEventListener('DOMContentLoaded', function() {
             housing_description: "מעונות נוחים ומעוררי השראה המיועדים לטפח קהילה וליצור סביבה מושלמת ללימוד תורה.",
             housing_beds: "מיטות",
             housing_access: "גישה ללימוד",
+            library_complex: "מרכז לימוד וספרייה מתקדם",
+            library_complex_short: "ספרייה מתקדמת",
+            library_description: "ספרייה מודרנית ונוחה עם אוסף עשיר של ספרי תורה וחכמה, מעוצבת ללימוד עמוק ומחקר תורני.",
+            library_books: "ספרים",
+            library_seats: "מקומות ישיבה",
             project_cta: "לחץ למידע נוסף",
             
             // About
@@ -322,12 +342,12 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Project cards - Dorms
         const dormsElements = {
-            title: document.querySelector('#projects .project-card:last-child .project-title'),
-            desc: document.querySelector('#projects .project-card:last-child .project-description'),
-            overlayTitle: document.querySelector('#projects .project-card:last-child .project-overlay-content h3'),
-            overlayCta: document.querySelector('#projects .project-card:last-child .project-overlay-content p'),
-            bedsLabel: document.querySelector('#projects .project-card:last-child .stat:first-child .stat-label'),
-            accessLabel: document.querySelector('#projects .project-card:last-child .stat:last-child .stat-label')
+            title: document.querySelector('#projects .project-card:nth-child(2) .project-title'),
+            desc: document.querySelector('#projects .project-card:nth-child(2) .project-description'),
+            overlayTitle: document.querySelector('#projects .project-card:nth-child(2) .project-overlay-content h3'),
+            overlayCta: document.querySelector('#projects .project-card:nth-child(2) .project-overlay-content p'),
+            bedsLabel: document.querySelector('#projects .project-card:nth-child(2) .stat:first-child .stat-label'),
+            accessLabel: document.querySelector('#projects .project-card:nth-child(2) .stat:last-child .stat-label')
         };
         
         if (dormsElements.title) dormsElements.title.textContent = t.housing_complex;
@@ -336,6 +356,23 @@ document.addEventListener('DOMContentLoaded', function() {
         if (dormsElements.overlayCta) dormsElements.overlayCta.textContent = t.project_cta;
         if (dormsElements.bedsLabel) dormsElements.bedsLabel.textContent = t.housing_beds;
         if (dormsElements.accessLabel) dormsElements.accessLabel.textContent = t.housing_access;
+
+        // Project cards - Library
+        const libraryElements = {
+            title: document.querySelector('#projects .project-card:nth-child(3) .project-title'),
+            desc: document.querySelector('#projects .project-card:nth-child(3) .project-description'),
+            overlayTitle: document.querySelector('#projects .project-card:nth-child(3) .project-overlay-content h3'),
+            overlayCta: document.querySelector('#projects .project-card:nth-child(3) .project-overlay-content p'),
+            booksLabel: document.querySelector('#projects .project-card:nth-child(3) .stat:first-child .stat-label'),
+            seatsLabel: document.querySelector('#projects .project-card:nth-child(3) .stat:last-child .stat-label')
+        };
+        
+        if (libraryElements.title) libraryElements.title.textContent = t.library_complex;
+        if (libraryElements.desc) libraryElements.desc.textContent = t.library_description;
+        if (libraryElements.overlayTitle) libraryElements.overlayTitle.textContent = t.library_complex_short;
+        if (libraryElements.overlayCta) libraryElements.overlayCta.textContent = t.project_cta;
+        if (libraryElements.booksLabel) libraryElements.booksLabel.textContent = t.library_books;
+        if (libraryElements.seatsLabel) libraryElements.seatsLabel.textContent = t.library_seats;
     }
 
     function updateAboutSection(t) {
