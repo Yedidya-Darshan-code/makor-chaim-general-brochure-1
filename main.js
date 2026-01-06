@@ -37,8 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Rabbi Message
             rav_title: "A Message from Rabbi Dov Zinger",
             rav_subtitle: "Rosh Yeshiva of Makor Chaim",
-            rav_text_1: "At Makor Chaim Yeshiva, we educate our students to live lives of Torah with Derech Eretz. The Yeshiva is known for its unique approach to education, combining deep Torah study with involvement in Israeli society.",
-            rav_text_2: "Today, we are in the process of expansion and building, in order to increase our influence and reach more students. I invite you to join us on this journey, to support our vision and be part of building the future of Jewish education in Israel.",
+            rav_text_opening: "Our dear graduates and friends,",
+            rav_text_quote: "For with You is the fountain of life",
+            rav_text_1: "Forty-one years have passed, and our hearts still beat with the same aspiration - to educate a generation of Torah scholars, people of character, men of kindness. A generation that knows how to learn deeply, to live truthfully, to give of themselves to others.",
+            rav_text_2: "Today, as we stand on the threshold of building our new campus in Gush Etzion, we feel this is a moment of revival and renewal. A place where the path of our fathers meets the path of our sons, where ancient Torah meets renewed life.",
+            rav_text_3: "I invite you to be partners in this sacred endeavor, to build together this home, this generation, this future. For every stone we build, every student we educate - is another candle illuminating the darkness, another wellspring of Torah and kindness in our world.",
             rav_closing: "Thank you from the bottom of my heart for your support,",
             rav_signature: "Sincerely,",
             rav_name: "Rabbi Dov Zinger",
@@ -66,11 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
             fitness_description: "A state-of-the-art gymnasium and fitness facility to promote physical wellness alongside spiritual growth.",
             fitness_sqft: "sq ft",
             fitness_students: "students served",
-            housing_complex: "Modern Student Housing Complex",
-            housing_complex_short: "Student Dormitories",
-            housing_description: "Comfortable and inspiring dormitories designed to foster community and create the perfect environment for Torah study.",
-            housing_beds: "beds",
-            housing_access: "study access",
+            elevator_complex: "Accessibility Elevator Construction",
+            elevator_complex_short: "Accessibility Elevator",
+            elevator_description: "A modern accessibility elevator to make the yeshiva accessible to students and visitors with mobility limitations, ensuring equal opportunities for every student.",
             library_complex: "Advanced Study Center & Library",
             library_complex_short: "Advanced Library",
             library_description: "Modern and comfortable library with a rich collection of Torah and wisdom books, designed for deep study and Torah research.",
@@ -103,14 +104,42 @@ document.addEventListener('DOMContentLoaded', function() {
             gallery_torah_desc: "Students engaged in intensive study in our Beit Midrash",
             gallery_campus: "Inspiring Campus",
             gallery_campus_desc: "Our stunning location in the heart of Gush Etzion",
-            gallery_chavruta: "Chavruta Learning",
-            gallery_chavruta_desc: "The traditional study partnership that builds deep understanding",
-            gallery_community: "Community & Brotherhood",
-            gallery_community_desc: "Sharing meaningful moments and building lifelong friendships",
-            gallery_nature: "Learning in Nature",
-            gallery_nature_desc: "Torah study surrounded by the beauty of Eretz Yisrael",
-            gallery_growth: "Growth & Achievement",
-            gallery_growth_desc: "Celebrating milestones and personal development",
+            gallery_chavruta: "Weekly Mishmar Until Late Hours",
+            gallery_chavruta_desc: "Special late-night Torah study group continuing deep into the night",
+            gallery_community: "Farbrengen & Niggunim",
+            gallery_community_desc: "Special evening of Torah, Chassidic melodies, and unity for the Alter Rebbe's Yartzeit",
+            gallery_nature: "Gemara Competition & Joy of Learning",
+            gallery_nature_desc: "Annual Chanukah Gemara competition combining the light of the holiday with the light of Torah",
+            gallery_growth: "Dedicated Staff",
+            gallery_growth_desc: "Devoted rabbis and educators guiding each student on their personal journey",
+            
+            // Community Involvement Section
+            community_section_title: "Community Involvement",
+            community_section_subtitle: "Our students lead projects of Tikkun Olam and kindness",
+            
+            community_sukkah_badge: "Kindness Project",
+            community_sukkah_title: "Sukkah Building",
+            community_sukkah_desc: "Our students help elderly families and single-parent families build sukkot for the holiday, bringing joy and light to the community.",
+            community_sukkah_stat1_num: "15+",
+            community_sukkah_stat1_label: "Families",
+            community_sukkah_stat2_num: "25",
+            community_sukkah_stat2_label: "Students",
+            
+            community_memorial_badge: "Education & Commemoration",
+            community_memorial_title: "Memorial Visits",
+            community_memorial_desc: "Regular visits to memorial sites and commemoration ceremonies for fallen IDF soldiers and terror victims, maintaining the connection between generations.",
+            community_memorial_stat1_num: "12",
+            community_memorial_stat1_label: "Events per year",
+            community_memorial_stat2_num: "50+",
+            community_memorial_stat2_label: "Participants",
+            
+            community_agriculture_badge: "Working the Land",
+            community_agriculture_title: "Agricultural Volunteering",
+            community_agriculture_desc: "Working in the fields and orchards of local farmers, strengthening the connection to the land and work values.",
+            community_agriculture_stat1_num: "8",
+            community_agriculture_stat1_label: "Farms",
+            community_agriculture_stat2_num: "200+",
+            community_agriculture_stat2_label: "Hours",
             
             // Contact
             contact_title: "Partner With Us",
@@ -124,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
             address: "Makor Chaim Institutions\nNeve Daniel Educational Center\nP.O. Box 27\nNeve Daniel 9090900, Israel",
             
             // Footer
-            copyright: "© 2025 Makor Chaim Institutions. All rights reserved."
+            copyright: "© 2026 Makor Chaim Institutions. All rights reserved."
         },
         he: {
             // Header
@@ -150,8 +179,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Rabbi Message
             rav_title: "מסר מהרב דוב זינגר",
             rav_subtitle: "ראש ישיבת מקור חיים",
-            rav_text_1: "[כאן יופיע מסר הרב דוב זינגר על הקמפוס החדש והפרויקטים הנוכחיים - אנא ספק את הטקסט בעברית]",
-            rav_text_2: "[פסקה שנייה על החזון לתורה, עבודה וגמילות חסדים - אנא ספק את הטקסט בעברית]",
+            rav_text_opening: "בוגרינו וידידינו היקרים,",
+            rav_text_quote: "כי עמך מקור חיים",
+            rav_text_1: "ארבעים ואחת שנים עוברות, והלב עדיין דופק באותה שאיפה - לחנך דור של תלמידי חכמים, בעלי מידות, אנשי חסד. דור שיודע ללמוד עמוק, לחיות באמת, לתת מעצמו לזולת.",
+            rav_text_2: "היום, בעמדנו על סף בניין הקמפוס החדש בגוש עציון, אנו חשים שזהו רגע של תקומה ושל התחדשות. מקום שבו דרך האבות פוגשת את דרך הבנים, שבו התורה העתיקה פוגשת את החיים המתחדשים.",
+            rav_text_3: "אני מזמין אתכם להיות שותפים במפעל הקדוש הזה, לבנות יחד את הבית הזה, את הדור הזה, את העתיד הזה. כי כל אבן שנבנה, כל תלמיד שנחנך - הוא נר נוסף שמאיר את החושך, הוא מעיין נוסף של תורה וחסד בעולמנו.",
             rav_closing: "תודה מקרב לב על תמיכתכם,",
             rav_signature: "בברכה,",
             rav_name: "הרב דוב זינגר",
@@ -179,11 +211,9 @@ document.addEventListener('DOMContentLoaded', function() {
             fitness_description: "חדר כושר ומתקן ספורט מתקדם לעידוד בריאות גופנית לצד צמיחה רוחנית.",
             fitness_sqft: "רגל מרובע",
             fitness_students: "תלמידים",
-            housing_complex: "מתקן דיור מודרני לתלמידים",
-            housing_complex_short: "מעונות תלמידים",
-            housing_description: "מעונות נוחים ומעוררי השראה המיועדים לטפח קהילה וליצור סביבה מושלמת ללימוד תורה.",
-            housing_beds: "מיטות",
-            housing_access: "גישה ללימוד",
+            elevator_complex: "בניית מעלית לנכים",
+            elevator_complex_short: "מעלית נגישות",
+            elevator_description: "מעלית נגישות מתקדמת להנגשת הישיבה לתלמידים ומבקרים עם מוגבלות ניידות, מבטיחים שוויון הזדמנויות לכל תלמיד.",
             library_complex: "מרכז לימוד וספרייה מתקדם",
             library_complex_short: "ספרייה מתקדמת",
             library_description: "ספרייה מודרנית ונוחה עם אוסף עשיר של ספרי תורה וחכמה, מעוצבת ללימוד עמוק ומחקר תורני.",
@@ -206,14 +236,42 @@ document.addEventListener('DOMContentLoaded', function() {
             gallery_torah_desc: "תלמידים עוסקים בלימוד אינטנסיבי בבית המדרש שלנו",
             gallery_campus: "קמפוס מעורר השראה",
             gallery_campus_desc: "המיקום המדהים שלנו בלב גוש עציון",
-            gallery_chavruta: "לימוד בחברותא",
-            gallery_chavruta_desc: "השותפות המסורתית בלימוד הבונה הבנה עמוקה",
-            gallery_community: "קהילה ואחווה",
-            gallery_community_desc: "חלוקת רגעים משמעותיים ובניית ידידויות לכל החיים",
-            gallery_nature: "לימוד בטבע",
-            gallery_nature_desc: "לימוד תורה מוקף ביופיה של ארץ ישראל",
-            gallery_growth: "צמיחה והישגים",
-            gallery_growth_desc: "חגיגת ציוני דרך והתפתחות אישית",
+            gallery_chavruta: "משמר כל שבוע עד השעות הקטנות",
+            gallery_chavruta_desc: "חבורה ייחודית ללימוד תורה עמוק ומתמיד בשעות הלילה המאוחרות",
+            gallery_community: "התוועדות וניגונים",
+            gallery_community_desc: "ערב מיוחד של תורה, ניגון ואחדות לכבוד יום הילולת אדמו״ר הזקן",
+            gallery_nature: "חידון והנאה מלימוד הגמרא",
+            gallery_nature_desc: "תחרות גמרא שנתית לחנוכה, משלבת את אור החג עם אור התורה",
+            gallery_growth: "צוות מסור",
+            gallery_growth_desc: "רבנים ומחנכים מסורים המלווים כל תלמיד בדרכו האישית",
+            
+            // Community Involvement Section
+            community_section_title: "מעורבות קהילתית",
+            community_section_subtitle: "תלמידינו מובילים בפרויקטים של תיקון עולם וחסד",
+            
+            community_sukkah_badge: "פרויקט חסד",
+            community_sukkah_title: "בניית סוכות",
+            community_sukkah_desc: "תלמידינו עוזרים למשפחות קשישים ומשפחות בודדות לבנות סוכות לחג הסוכות, מביאים שמחה ואור לקהילה.",
+            community_sukkah_stat1_num: "15+",
+            community_sukkah_stat1_label: "משפחות",
+            community_sukkah_stat2_num: "25",
+            community_sukkah_stat2_label: "תלמידים",
+            
+            community_memorial_badge: "חינוך והנצחה",
+            community_memorial_title: "ביקורי זיכרון",
+            community_memorial_desc: "ביקורים קבועים באתרי זיכרון וטקסי הנצחה לחללי צה\"ל ונפגעי טרור, שומרים על הקשר בין הדורות.",
+            community_memorial_stat1_num: "12",
+            community_memorial_stat1_label: "אירועים בשנה",
+            community_memorial_stat2_num: "50+",
+            community_memorial_stat2_label: "משתתפים",
+            
+            community_agriculture_badge: "עבודת האדמה",
+            community_agriculture_title: "התנדבות חקלאית",
+            community_agriculture_desc: "עבודה בשדות ומטעים של חקלאים מקומיים, מחזקים את הקשר לאדמה ולערכי העבודה.",
+            community_agriculture_stat1_num: "8",
+            community_agriculture_stat1_label: "חווות",
+            community_agriculture_stat2_num: "200+",
+            community_agriculture_stat2_label: "שעות",
             
             // Contact
             contact_title: "היו שותפים שלנו",
@@ -227,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function() {
             address: "מוסדות מקור חיים\nמרכז חינוכי נווה דניאל\nת.ד. 27\nנווה דניאל 9090900, ישראל",
             
             // Footer
-            copyright: "© 2025 מוסדות מקור חיים. כל הזכויות שמורות."
+            copyright: "© 2026 מוסדות מקור חיים. כל הזכויות שמורות."
         }
     };
     
@@ -265,6 +323,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // About section
             updateAboutSection(t);
             
+            // Community section
+            updateCommunitySection(t);
+            
             // Gallery section
             updateGallerySection(t);
             
@@ -300,12 +361,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const ravTitle = document.querySelector('.rav-title');
         if (ravTitle) ravTitle.textContent = t.rav_title;
         
-        // Message paragraphs
-        const messageParagraphs = document.querySelectorAll('.message-paragraph');
-        if (messageParagraphs.length >= 2) {
-            messageParagraphs[0].textContent = t.rav_text_1;
-            messageParagraphs[1].textContent = t.rav_text_2;
-        }
+        // Message paragraphs - update with new classes
+        const ravOpening = document.querySelector('.rav-opening');
+        const ravQuote = document.querySelector('.rav-quote');
+        const ravP1 = document.querySelector('.rav-p1');
+        const ravP2 = document.querySelector('.rav-p2');
+        const ravP3 = document.querySelector('.rav-p3');
+        
+        if (ravOpening) ravOpening.textContent = t.rav_text_opening;
+        if (ravQuote) ravQuote.textContent = t.rav_text_quote;
+        if (ravP1) ravP1.textContent = t.rav_text_1;
+        if (ravP2) ravP2.textContent = t.rav_text_2;
+        if (ravP3) ravP3.textContent = t.rav_text_3;
         
         // Signature
         const signatureText = document.querySelector('.rav-signature .signature-text');
@@ -330,51 +397,39 @@ document.addEventListener('DOMContentLoaded', function() {
             title: document.querySelector('#projects .project-card:first-child .project-title'),
             desc: document.querySelector('#projects .project-card:first-child .project-description'),
             overlayTitle: document.querySelector('#projects .project-card:first-child .project-overlay-content h3'),
-            overlayCta: document.querySelector('#projects .project-card:first-child .project-overlay-content p'),
-            sqftLabel: document.querySelector('#projects .project-card:first-child .stat:first-child .stat-label'),
-            studentsLabel: document.querySelector('#projects .project-card:first-child .stat:last-child .stat-label')
+            overlayCta: document.querySelector('#projects .project-card:first-child .project-overlay-content p')
         };
         
         if (gymElements.title) gymElements.title.textContent = t.fitness_center;
         if (gymElements.desc) gymElements.desc.textContent = t.fitness_description;
         if (gymElements.overlayTitle) gymElements.overlayTitle.textContent = t.fitness_center_short;
         if (gymElements.overlayCta) gymElements.overlayCta.textContent = t.project_cta;
-        if (gymElements.sqftLabel) gymElements.sqftLabel.textContent = t.fitness_sqft;
-        if (gymElements.studentsLabel) gymElements.studentsLabel.textContent = t.fitness_students;
         
-        // Project cards - Dorms
-        const dormsElements = {
+        // Project cards - Elevator
+        const elevatorElements = {
             title: document.querySelector('#projects .project-card:nth-child(2) .project-title'),
             desc: document.querySelector('#projects .project-card:nth-child(2) .project-description'),
             overlayTitle: document.querySelector('#projects .project-card:nth-child(2) .project-overlay-content h3'),
-            overlayCta: document.querySelector('#projects .project-card:nth-child(2) .project-overlay-content p'),
-            bedsLabel: document.querySelector('#projects .project-card:nth-child(2) .stat:first-child .stat-label'),
-            accessLabel: document.querySelector('#projects .project-card:nth-child(2) .stat:last-child .stat-label')
+            overlayCta: document.querySelector('#projects .project-card:nth-child(2) .project-overlay-content p')
         };
         
-        if (dormsElements.title) dormsElements.title.textContent = t.housing_complex;
-        if (dormsElements.desc) dormsElements.desc.textContent = t.housing_description;
-        if (dormsElements.overlayTitle) dormsElements.overlayTitle.textContent = t.housing_complex_short;
-        if (dormsElements.overlayCta) dormsElements.overlayCta.textContent = t.project_cta;
-        if (dormsElements.bedsLabel) dormsElements.bedsLabel.textContent = t.housing_beds;
-        if (dormsElements.accessLabel) dormsElements.accessLabel.textContent = t.housing_access;
+        if (elevatorElements.title) elevatorElements.title.textContent = t.elevator_complex;
+        if (elevatorElements.desc) elevatorElements.desc.textContent = t.elevator_description;
+        if (elevatorElements.overlayTitle) elevatorElements.overlayTitle.textContent = t.elevator_complex_short;
+        if (elevatorElements.overlayCta) elevatorElements.overlayCta.textContent = t.project_cta;
 
         // Project cards - Library
         const libraryElements = {
             title: document.querySelector('#projects .project-card:nth-child(3) .project-title'),
             desc: document.querySelector('#projects .project-card:nth-child(3) .project-description'),
             overlayTitle: document.querySelector('#projects .project-card:nth-child(3) .project-overlay-content h3'),
-            overlayCta: document.querySelector('#projects .project-card:nth-child(3) .project-overlay-content p'),
-            booksLabel: document.querySelector('#projects .project-card:nth-child(3) .stat:first-child .stat-label'),
-            seatsLabel: document.querySelector('#projects .project-card:nth-child(3) .stat:last-child .stat-label')
+            overlayCta: document.querySelector('#projects .project-card:nth-child(3) .project-overlay-content p')
         };
         
         if (libraryElements.title) libraryElements.title.textContent = t.library_complex;
         if (libraryElements.desc) libraryElements.desc.textContent = t.library_description;
         if (libraryElements.overlayTitle) libraryElements.overlayTitle.textContent = t.library_complex_short;
         if (libraryElements.overlayCta) libraryElements.overlayCta.textContent = t.project_cta;
-        if (libraryElements.booksLabel) libraryElements.booksLabel.textContent = t.library_books;
-        if (libraryElements.seatsLabel) libraryElements.seatsLabel.textContent = t.library_seats;
     }
 
     function updateAboutSection(t) {
@@ -401,6 +456,54 @@ document.addEventListener('DOMContentLoaded', function() {
         if (highlightTorah) highlightTorah.textContent = t.about_highlight_torah;
         if (highlightCommunity) highlightCommunity.textContent = t.about_highlight_community;
         if (highlightInnovation) highlightInnovation.textContent = t.about_highlight_innovation;
+    }
+
+    function updateCommunitySection(t) {
+        const communityTitle = document.querySelector('#community .section-title');
+        const communitySubtitle = document.querySelector('#community .section-subtitle');
+        
+        if (communityTitle) communityTitle.textContent = t.community_section_title;
+        if (communitySubtitle) communitySubtitle.textContent = t.community_section_subtitle;
+        
+        const communityCards = document.querySelectorAll('#community .community-card');
+        
+        if (communityCards.length >= 3) {
+            // Sukkah card (first card)
+            const sukkahBadge = communityCards[0].querySelector('.community-badge');
+            const sukkahTitle = communityCards[0].querySelector('.community-title');
+            const sukkahDesc = communityCards[0].querySelector('.community-description');
+            const sukkahStats = communityCards[0].querySelectorAll('.stat-label');
+            
+            if (sukkahBadge) sukkahBadge.textContent = t.community_sukkah_badge;
+            if (sukkahTitle) sukkahTitle.textContent = t.community_sukkah_title;
+            if (sukkahDesc) sukkahDesc.textContent = t.community_sukkah_desc;
+            if (sukkahStats[0]) sukkahStats[0].textContent = t.community_sukkah_stat1_label;
+            if (sukkahStats[1]) sukkahStats[1].textContent = t.community_sukkah_stat2_label;
+            
+            // Memorial card (second card)
+            const memorialBadge = communityCards[1].querySelector('.community-badge');
+            const memorialTitle = communityCards[1].querySelector('.community-title');
+            const memorialDesc = communityCards[1].querySelector('.community-description');
+            const memorialStats = communityCards[1].querySelectorAll('.stat-label');
+            
+            if (memorialBadge) memorialBadge.textContent = t.community_memorial_badge;
+            if (memorialTitle) memorialTitle.textContent = t.community_memorial_title;
+            if (memorialDesc) memorialDesc.textContent = t.community_memorial_desc;
+            if (memorialStats[0]) memorialStats[0].textContent = t.community_memorial_stat1_label;
+            if (memorialStats[1]) memorialStats[1].textContent = t.community_memorial_stat2_label;
+            
+            // Agriculture card (third card)
+            const agricultureBadge = communityCards[2].querySelector('.community-badge');
+            const agricultureTitle = communityCards[2].querySelector('.community-title');
+            const agricultureDesc = communityCards[2].querySelector('.community-description');
+            const agricultureStats = communityCards[2].querySelectorAll('.stat-label');
+            
+            if (agricultureBadge) agricultureBadge.textContent = t.community_agriculture_badge;
+            if (agricultureTitle) agricultureTitle.textContent = t.community_agriculture_title;
+            if (agricultureDesc) agricultureDesc.textContent = t.community_agriculture_desc;
+            if (agricultureStats[0]) agricultureStats[0].textContent = t.community_agriculture_stat1_label;
+            if (agricultureStats[1]) agricultureStats[1].textContent = t.community_agriculture_stat2_label;
+        }
     }
 
     function updateGallerySection(t) {
@@ -487,17 +590,17 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.logo-text h1').textContent = t.yeshiva_name;
             document.querySelector('.tagline').textContent = t.tagline;
             
-            // Navigation links
+            // Navigation links - HTML is in reverse order (Contact to Home)
             const navLinks = document.querySelectorAll('.nav-link');
             if (navLinks.length >= 8) {
-                navLinks[0].textContent = t.contact;
-                navLinks[1].textContent = t.gallery;
-                navLinks[2].textContent = t.community;
-                navLinks[3].textContent = t.about;
-                navLinks[4].textContent = t.projects;
-                navLinks[5].textContent = t.story;
-                navLinks[6].textContent = t.message;
                 navLinks[7].textContent = t.home;
+                navLinks[6].textContent = t.message;
+                navLinks[5].textContent = t.story;
+                navLinks[4].textContent = t.projects;
+                navLinks[3].textContent = t.about;
+                navLinks[2].textContent = t.community;
+                navLinks[1].textContent = t.gallery;
+                navLinks[0].textContent = t.contact;
             }
             
             // Update all content
@@ -653,8 +756,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Parse different number formats with better logic
                     if (text === '1985') {
                         targetNumber = 1985;
-                    } else if (text === '2025') {
-                        targetNumber = 2025;
+                    } else if (text === '2026') {
+                        targetNumber = 2026;
                     } else if (text.includes('+')) {
                         targetNumber = parseInt(text.replace('+', ''));
                         suffix = '+';
@@ -749,16 +852,17 @@ document.addEventListener('DOMContentLoaded', function() {
     if (logoText) logoText.textContent = t.yeshiva_name;
     if (tagline) tagline.textContent = t.tagline;
     
-    // Navigation links on load
+    // Navigation links on load - Hebrew order
     const initialNavLinks = document.querySelectorAll('.nav-link');
-    if (initialNavLinks.length >= 7) {
-        initialNavLinks[0].textContent = t.contact;
+    if (initialNavLinks.length >= 8) {
+        initialNavLinks[7].textContent = t.home;
+        initialNavLinks[6].textContent = t.message;
+        initialNavLinks[5].textContent = t.story;
+        initialNavLinks[4].textContent = t.projects;
+        initialNavLinks[3].textContent = t.about;
+        initialNavLinks[2].textContent = t.community;
         initialNavLinks[1].textContent = t.gallery;
-        initialNavLinks[2].textContent = t.about;
-        initialNavLinks[3].textContent = t.projects;
-        initialNavLinks[4].textContent = t.story;
-        initialNavLinks[5].textContent = t.message;
-        initialNavLinks[6].textContent = t.home;
+        initialNavLinks[0].textContent = t.contact;
     }
     
     // Mobile menu functionality

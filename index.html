@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     <title>Makor Chaim Yeshiva - Building Our Future</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600&family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260106v2">
     <link rel="stylesheet" href="section-styles.css">
     <link rel="stylesheet" href="professional-additions.css">
+    <script src="main.js?v=20260106v2" defer></script>
     <!-- Critical translations variable in head -->
     <script>
     // Pre-define translations variable - will be used by main.js
@@ -97,12 +98,11 @@
                             <div class="quote-mark">"</div>
                         </div>
                         <div class="rav-message-text">
-                            <p class="message-paragraph slide-in-right" style="animation-delay: 0.3s;">
-                                [כאן יופיע מסר הרב דוב זינגר על הקמפוס החדש והפרויקטים הנוכחיים - אנא ספק את הטקסט בעברית]
-                            </p>
-                            <p class="message-paragraph slide-in-right" style="animation-delay: 0.5s;">
-                                [פסקה שנייה על החזון לתורה, עבודה וגמילות חסדים - אנא ספק את הטקסט בעברית]
-                            </p>
+                            <p class="message-paragraph rav-opening slide-in-right" style="animation-delay: 0.3s;">בוגרינו וידידינו היקרים,</p>
+                            <p class="message-paragraph rav-quote slide-in-right" style="animation-delay: 0.4s;">"כי עמך מקור חיים"</p>
+                            <p class="message-paragraph rav-p1 slide-in-right" style="animation-delay: 0.5s;">ארבעים ואחת שנים עוברות, והלב עדיין דופק באותה שאיפה - לחנך דור של תלמידי חכמים, בעלי מידות, אנשי חסד. דור שיודע ללמוד עמוק, לחיות באמת, לתת מעצמו לזולת.</p>
+                            <p class="message-paragraph rav-p2 slide-in-right" style="animation-delay: 0.6s;">היום, בעמדנו על סף בניין הקמפוס החדש בגוש עציון, אנו חשים שזהו רגע של תקומה ושל התחדשות. מקום שבו דרך האבות פוגשת את דרך הבנים, שבו התורה העתיקה פוגשת את החיים המתחדשים.</p>
+                            <p class="message-paragraph rav-p3 slide-in-right" style="animation-delay: 0.7s;">אני מזמין אתכם להיות שותפים במפעל הקדוש הזה, לבנות יחד את הבית הזה, את הדור הזה, את העתיד הזה. כי כל אבן שנבנה, כל תלמיד שנחנך - הוא נר נוסף שמאיר את החושך, הוא מעיין נוסף של תורה וחסד בעולמנו.</p>
                         </div>
                         <div class="rav-signature slide-in-right" style="animation-delay: 0.7s;">
                             <p class="signature-text">תודה מקרב לב על תמיכתכם,</p>
@@ -127,10 +127,11 @@
                     <div class="video-container">
                         <div class="video-wrapper">
                             <iframe 
-                                src="https://www.youtube.com/embed/dskyz8n8ZUw?rel=0&modestbranding=1&showinfo=0" 
+                                src="https://www.youtube.com/embed/dskyz8n8ZUw?rel=0&modestbranding=1" 
                                 title="קליפ מוזיקלי ישיבת מקור חיים" 
                                 frameborder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin"
                                 allowfullscreen>
                             </iframe>
                         </div>
@@ -166,74 +167,24 @@
                         <div class="project-info">
                             <h3 class="project-title">מרכז כושר ובריאות לתלמידים</h3>
                             <p class="project-description">חדר כושר ומתקן ספורט מתקדם לעידוד בריאות גופנית לצד צמיחה רוחנית.</p>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <span class="stat-number">5,000</span>
-                                    <span class="stat-label">רגל מרובע</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">150+</span>
-                                    <span class="stat-label">תלמידים</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
-                    <!-- Dorms Project -->
-                    <div class="project-card slide-in-right" onclick="openProjectDetails('dorms')">
+                    <!-- Elevator Project -->
+                    <div class="project-card slide-in-right" onclick="openProjectDetails('elevator')">
                         <div class="project-image">
-                            <img src="media/images/dorms1.png" alt="מעונות תלמידים ישיבת מקור חיים" id="dorms-image">
+                            <img src="media/images/elevator-placeholder.jpg" alt="מעלית נגישות ישיבת מקור חיים" id="elevator-image">
                             <div class="project-overlay">
                                 <div class="project-overlay-content">
-                                    <h3>מעונות תלמידים</h3>
+                                    <h3>מעלית נגישות</h3>
                                     <p>לחץ למידע נוסף</p>
                                     <div class="arrow">←</div>
                                 </div>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title">מתקן דיור מודרני לתלמידים</h3>
-                            <p class="project-description">מעונות נוחים ומעוררי השראה המיועדים לטפח קהילה וליצור סביבה מושלמת ללימוד תורה.</p>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <span class="stat-number">120</span>
-                                    <span class="stat-label">מיטות</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">24/7</span>
-                                    <span class="stat-label">גישה ללימוד</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Library Project -->
-                    <div class="project-card slide-in-left" onclick="openProjectDetails('library')">
-                        <div class="project-image">
-                            <video class="project-video" muted autoplay loop playsinline>
-                                <source src="media/videos/video overview of library.mp4" type="video/mp4">
-                            </video>
-                            <div class="project-overlay">
-                                <div class="project-overlay-content">
-                                    <h3>ספרייה מתקדמת</h3>
-                                    <p>לחץ למידע נוסף</p>
-                                    <div class="arrow">←</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">מרכז לימוד וספרייה מתקדם</h3>
-                            <p class="project-description">ספרייה מודרנית ונוחה עם אוסף עשיר של ספרי תורה וחכמה, מעוצבת ללימוד עמוק ומחקר תורני.</p>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <span class="stat-number">10,000+</span>
-                                    <span class="stat-label">ספרים</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">80</span>
-                                    <span class="stat-label">מקומות ישיבה</span>
-                                </div>
-                            </div>
+                            <h3 class="project-title">בניית מעלית לנכים</h3>
+                            <p class="project-description">מעלית נגישות מתקדמת להנגשת הישיבה לתלמידים ומבקרים עם מוגבלות ניידות, מבטיחים שוויון הזדמנויות לכל תלמיד.</p>
                         </div>
                     </div>
                 </div>
@@ -260,7 +211,7 @@
                                 <span class="stat-label">שנות חדשנות</span>
                             </div>
                             <div class="stat-item slide-in-up" style="animation-delay: 0.6s;">
-                                <span class="stat-number counter" data-target="2025">2025</span>
+                                <span class="stat-number counter" data-target="2026">2026</span>
                                 <span class="stat-label">קמפוס בגוש עציון</span>
                             </div>
                         </div>
@@ -318,16 +269,6 @@
                             <p class="community-description">
                                 תלמידינו עוזרים למשפחות קשישים ומשפחות בודדות לבנות סוכות לחג הסוכות, מביאים שמחה ואור לקהילה.
                             </p>
-                            <div class="community-stats">
-                                <div class="community-stat">
-                                    <span class="stat-number">15+</span>
-                                    <span class="stat-label">משפחות</span>
-                                </div>
-                                <div class="community-stat">
-                                    <span class="stat-number">25</span>
-                                    <span class="stat-label">תלמידים</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -342,16 +283,6 @@
                             <p class="community-description">
                                 ביקורים קבועים באתרי זיכרון וטקסי הנצחה לחללי צה"ל ונפגעי טרור, שומרים על הקשר בין הדורות.
                             </p>
-                            <div class="community-stats">
-                                <div class="community-stat">
-                                    <span class="stat-number">12</span>
-                                    <span class="stat-label">אירועים בשנה</span>
-                                </div>
-                                <div class="community-stat">
-                                    <span class="stat-number">50+</span>
-                                    <span class="stat-label">משתתפים</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -366,16 +297,6 @@
                             <p class="community-description">
                                 עבודה בשדות ומטעים של חקלאים מקומיים, מחזקים את הקשר לאדמה ולערכי העבודה.
                             </p>
-                            <div class="community-stats">
-                                <div class="community-stat">
-                                    <span class="stat-number">8</span>
-                                    <span class="stat-label">חוות</span>
-                                </div>
-                                <div class="community-stat">
-                                    <span class="stat-number">200+</span>
-                                    <span class="stat-label">שעות</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -408,34 +329,34 @@
                     </div>
                     
                     <div class="gallery-item slide-in-right">
-                        <img src="media/images/students-discussion.jpg" alt="תלמידים בדיון תורני נמרץ" class="gallery-image">
+                        <img src="media/images/Chabura in Mishmar.png" alt="חבורה במשמר עד השעות הקטנות" class="gallery-image">
                         <div class="gallery-overlay">
-                            <h3>לימוד בחברותא</h3>
-                            <p>השותפות המסורתית בלימוד הבונה הבנה עמוקה</p>
+                            <h3>משמר כל שבוע עד השעות הקטנות</h3>
+                            <p>חבורה ייחודית ללימוד תורה עמוק ומתמיד בשעות הלילה המאוחרות</p>
                         </div>
                     </div>
                     
                     <div class="gallery-item slide-in-left">
-                        <img src="media/images/community-meal.jpg" alt="תלמידים חולקים סועדת שבת" class="gallery-image">
+                        <img src="media/images/fabreigen.png" alt="התוועדות חסידית ליום י״ט כסלו" class="gallery-image">
                         <div class="gallery-overlay">
-                            <h3>קהילה ואחווה</h3>
-                            <p>חלוקת רגעים משמעותיים ובניית ידידויות לכל החיים</p>
+                            <h3>התוועדות חסידית - י״ט כסלו</h3>
+                            <p>ערב מיוחד של תורה, ניגון ואחדות לכבוד יום הילולת אדמו״ר הזקן</p>
                         </div>
                     </div>
                     
                     <div class="gallery-item slide-in-up">
-                        <img src="media/images/outdoor-learning.jpg" alt="תלמידים לומדים בחוץ בטבע" class="gallery-image">
+                        <img src="media/images/competition-gemara.png" alt="חידון גמרא שנתי לחנוכה" class="gallery-image">
                         <div class="gallery-overlay">
-                            <h3>לימוד בטבע</h3>
-                            <p>לימוד תורה מוקף ביופיה של ארץ ישראל</p>
+                            <h3>חידון גמרא - חנוכה</h3>
+                            <p>תחרות גמרא מרגשת המתקיימת מדי שנה, משלבת את אור חנוכה עם אור התורה</p>
                         </div>
                     </div>
                     
                     <div class="gallery-item slide-in-right">
-                        <img src="media/images/graduation.jpg" alt="תלמידים בטקס סיום" class="gallery-image">
+                        <img src="media/images/staff.png" alt="הצוות המסור של הישיבה" class="gallery-image">
                         <div class="gallery-overlay">
-                            <h3>צמיחה והישגים</h3>
-                            <p>חגיגת ציוני דרך והתפתחות אישית</p>
+                            <h3>צוות מסור</h3>
+                            <p>רבנים ומחנכים מסורים המלווים כל תלמיד בדרכו האישית</p>
                         </div>
                     </div>
                 </div>
@@ -482,7 +403,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 מוסדות מקור חיים. כל הזכויות שמורות.</p>
+            <p>&copy; 2026 מוסדות מקור חיים. כל הזכויות שמורות.</p>
         </div>
     </footer>
     
