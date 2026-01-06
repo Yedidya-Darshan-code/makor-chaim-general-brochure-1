@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             story: "Our Story",
             projects: "Current Projects",
             about: "About",
+            community: "Community Involvement",
             gallery: "Gallery",
             contact: "Contact",
             
@@ -136,6 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
             story: "הסיפור שלנו",
             projects: "פרויקטים נוכחיים",
             about: "אודות",
+            community: "מעורבות קהילתית",
             gallery: "גלריה",
             contact: "צור קשר",
             
@@ -487,14 +489,15 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Navigation links
             const navLinks = document.querySelectorAll('.nav-link');
-            if (navLinks.length >= 7) {
+            if (navLinks.length >= 8) {
                 navLinks[0].textContent = t.contact;
                 navLinks[1].textContent = t.gallery;
-                navLinks[2].textContent = t.about;
-                navLinks[3].textContent = t.projects;
-                navLinks[4].textContent = t.story;
-                navLinks[5].textContent = t.message;
-                navLinks[6].textContent = t.home;
+                navLinks[2].textContent = t.community;
+                navLinks[3].textContent = t.about;
+                navLinks[4].textContent = t.projects;
+                navLinks[5].textContent = t.story;
+                navLinks[6].textContent = t.message;
+                navLinks[7].textContent = t.home;
             }
             
             // Update all content
