@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     <title>Makor Chaim Yeshiva - Building Our Future</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600&family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20260106v2">
+    <link rel="stylesheet" href="styles.css?v=20260106v4">
     <link rel="stylesheet" href="section-styles.css">
     <link rel="stylesheet" href="professional-additions.css">
-    <script src="main.js?v=20260106v2" defer></script>
+    <script src="main.js?v=20260106v4" defer></script>
     <!-- Critical translations variable in head -->
     <script>
     // Pre-define translations variable - will be used by main.js
@@ -173,7 +173,7 @@
                     <!-- Elevator Project -->
                     <div class="project-card slide-in-right" onclick="openProjectDetails('elevator')">
                         <div class="project-image">
-                            <img src="media/images/elevator-placeholder.jpg" alt="מעלית נגישות ישיבת מקור חיים" id="elevator-image">
+                            <img src="media/images/elevator.png" alt="מעלית נגישות ישיבת מקור חיים" id="elevator-image">
                             <div class="project-overlay">
                                 <div class="project-overlay-content">
                                     <h3>מעלית נגישות</h3>
@@ -397,6 +397,59 @@
             <span class="close" onclick="closeProjectDetails()">&times;</span>
             <div id="modalContent">
                 <!-- Content will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Donation Section -->
+    <section class="donation-section">
+        <div class="container">
+            <div class="donation-content">
+                <h2 class="donation-title">תמכו בחזון שלנו</h2>
+                <p class="donation-subtitle">כל תרומה עוזרת לנו לבנות את העתיד של הישיבה ולהעניק לתלמידינו חינוך ברמה הגבוהה ביותר</p>
+                <a href="https://www.peach-in.com/cmp/wfX9fw53z?lang=he" class="donate-btn" id="donateBtn" target="_blank" rel="noopener noreferrer">
+                    <span class="donate-text">תרמו עכשיו</span>
+                    <span class="donate-icon">❤️</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals -->
+    <!-- Gym Modal -->
+    <div id="gymModal" class="project-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeProjectModal('gym')">&times;</span>
+            <div class="modal-header">
+                <h2 class="modal-title" id="gymModalTitle">מרכז כושר ובריאות לתלמידים</h2>
+            </div>
+            <div class="modal-body">
+                <img src="media/images/gym1.png" alt="Gym" class="modal-image">
+                <div class="modal-text" id="gymModalText">
+                    <h3>למה חדר כושר חיוני לישיבה?</h3>
+                    <p><strong>הכנה לשירות צבאי:</strong> תלמידינו מתגייסים ליחידות מובחרות בצה"ל ומשרתים בתפקידים מבצעיים. כושר גופני תקין הוא חיוני להצלחתם ובטיחותם.</p>
+                    <p><strong>דברי חז"ל:</strong> חז"ל לימדו אותנו ששמירה על הבריאות הגופנית היא חלק מעבודת השם. גוף בריא מסייע לנפש בריאה, ומאפשר למוד תורה בצורה איכותית ומרוכזת יותר.</p>
+                    <p><strong>איזון של גוף ונפש:</strong> הישיבה שלנו מאמינה בגישה מקיפה לחינוך - תורה, עבודה וגמילות חסדים. פעילות גופנית סדירה תורמת לאיזון נפשי ולצמיחה רוחנית.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Elevator Modal -->
+    <div id="elevatorModal" class="project-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeProjectModal('elevator')">&times;</span>
+            <div class="modal-header">
+                <h2 class="modal-title" id="elevatorModalTitle">בניית מעלית לנכים</h2>
+            </div>
+            <div class="modal-body">
+                <img src="media/images/elevator.png" alt="Elevator" class="modal-image">
+                <div class="modal-text" id="elevatorModalText">
+                    <h3>למה נגישות חשובה לנו?</h3>
+                    <p><strong>שוויון הזדמנויות:</strong> כל תלמיד ראוי להזדמנות שווה ללמוד ולצמוח, בלי תלות במוגבלות פיזית.</p>
+                    <p><strong>הנגשת הישיבה:</strong> המעלית תאפשר לתלמידים ולמבקרים עם מוגבלות ניידות גישה מלאה לכל חלקי הקמפוס.</p>
+                    <p><strong>ערכים יהודיים:</strong> התורה מלמדת אותנו לדאוג לכל אדם ולהעניק לו כבויות והזדמנות לצמיחה. המעלית מבטאת ערכים אלו בפועל.</p>
+                </div>
             </div>
         </div>
     </div>

@@ -152,6 +152,30 @@ document.addEventListener('DOMContentLoaded', function() {
             visit_campus: "Visit Our New Campus",
             address: "Makor Chaim Institutions\nNeve Daniel Educational Center\nP.O. Box 27\nNeve Daniel 9090900, Israel",
             
+            // Donation
+            donate_title: "Support Our Vision",
+            donate_subtitle: "Every contribution helps us build the future of our yeshiva and provide the highest quality education to our students",
+            donate_button: "Donate Now",
+            
+            // Project Modals
+            gym_modal_title: "Fitness and Wellness Center for Students",
+            gym_modal_why: "Why is a gym essential for our yeshiva?",
+            gym_modal_army: "Preparation for Military Service:",
+            gym_modal_army_text: "Our students enlist in elite IDF units and serve in combat roles. Superior physical fitness is essential for their success and safety.",
+            gym_modal_rambam: "Maimonides' Teachings:",
+            gym_modal_rambam_text: "The Rambam taught us that maintaining physical health is part of serving God. A healthy body supports a healthy soul and enables more focused and quality Torah study.",
+            gym_modal_balance: "Balance of Body and Soul:",
+            gym_modal_balance_text: "Our yeshiva believes in a comprehensive approach to education - Torah, work, and acts of kindness. Regular physical activity contributes to mental balance and spiritual growth.",
+            
+            elevator_modal_title: "Building an Accessible Elevator",
+            elevator_modal_why: "Why is accessibility important to us?",
+            elevator_modal_equal: "Equal Opportunities:",
+            elevator_modal_equal_text: "Every student deserves an equal opportunity to learn and grow, regardless of physical limitations.",
+            elevator_modal_access: "Making the Yeshiva Accessible:",
+            elevator_modal_access_text: "The elevator will enable students and visitors with mobility limitations full access to all parts of our campus.",
+            elevator_modal_values: "Jewish Values:",
+            elevator_modal_values_text: "The Torah teaches us to care for every person and provide them with dignity and opportunities for growth. The elevator embodies these values in action.",
+            
             // Footer
             copyright: "© 2026 Makor Chaim Institutions. All rights reserved."
         },
@@ -284,6 +308,30 @@ document.addEventListener('DOMContentLoaded', function() {
             visit_campus: "בקרו בקמפוס החדש שלנו",
             address: "מוסדות מקור חיים\nמרכז חינוכי נווה דניאל\nת.ד. 27\nנווה דניאל 9090900, ישראל",
             
+            // Donation
+            donate_title: "תמכו בחזון שלנו",
+            donate_subtitle: "כל תרומה עוזרת לנו לבנות את העתיד של הישיבה ולהעניק לתלמידינו חינוך ברמה הגבוהה ביותר",
+            donate_button: "תרמו עכשיו",
+            
+            // Project Modals
+            gym_modal_title: "מרכז כושר ובריאות לתלמידים",
+            gym_modal_why: "למה חדר כושר חיוני לישיבה?",
+            gym_modal_army: "הכנה לשירות צבאי:",
+            gym_modal_army_text: "תלמידינו מתגייסים ליחידות מובחרות בצה\"ל ומשרתים בתפקידים מבצעיים. כושר גופני תקין הוא חיוני להצלחתם ובטיחותם.",
+            gym_modal_rambam: "דברי חז\"ל:",
+            gym_modal_rambam_text: "חז\"ל לימדו אותנו ששמירה על הבריאות הגופנית היא חלק מעבודת השם. גוף בריא מסייע לנפש בריאה, ומאפשר למוד תורה בצורה איכותית ומרוכזת יותר.",
+            gym_modal_balance: "איזון של גוף ונפש:",
+            gym_modal_balance_text: "הישיבה שלנו מאמינה בגישה מקיפה לחינוך - תורה, עבודה וגמילות חסדים. פעילות גופנית סדירה תורמת לאיזון נפשי ולצמיחה רוחנית.",
+            
+            elevator_modal_title: "בניית מעלית לנכים",
+            elevator_modal_why: "למה נגישות חשובה לנו?",
+            elevator_modal_equal: "שוויון הזדמנויות:",
+            elevator_modal_equal_text: "כל תלמיד ראוי להזדמנות שווה ללמוד ולצמוח, בלי תלות במוגבלות פיזית.",
+            elevator_modal_access: "הנגשת הישיבה:",
+            elevator_modal_access_text: "המעלית תאפשר לתלמידים ולמבקרים עם מוגבלות ניידות גישה מלאה לכל חלקי הקמפוס.",
+            elevator_modal_values: "ערכים יהודיים:",
+            elevator_modal_values_text: "התורה מלמדת אותנו לדאוג לכל אדם ולהעניק לו כבויות והזדמנות לצמיחה. המעלית מבטאת ערכים אלו בפועל.",
+            
             // Footer
             copyright: "© 2026 מוסדות מקור חיים. כל הזכויות שמורות."
         }
@@ -331,6 +379,12 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Contact section
             updateContactSection(t);
+            
+            // Donation section
+            updateDonationSection(t);
+            
+            // Project Modals
+            updateModalContent(t);
 
             // Footer
             const copyright = document.querySelector('.footer p');
@@ -555,6 +609,56 @@ document.addEventListener('DOMContentLoaded', function() {
             contactLabels[0].textContent = t.director + ':';
             contactLabels[1].textContent = t.email + ':';
             contactLabels[2].textContent = t.phone + ':';
+        }
+    }
+    
+    function updateDonationSection(t) {
+        const donateTitle = document.querySelector('.donation-title');
+        const donateSubtitle = document.querySelector('.donation-subtitle');
+        const donateBtn = document.getElementById('donateBtn');
+        const donateText = document.querySelector('.donate-text');
+        
+        if (donateTitle) donateTitle.textContent = t.donate_title;
+        if (donateSubtitle) donateSubtitle.textContent = t.donate_subtitle;
+        if (donateText) donateText.textContent = t.donate_button;
+        
+        // Update the donation link based on language
+        if (donateBtn) {
+            if (currentLanguage === 'he') {
+                donateBtn.href = 'https://www.peach-in.com/cmp/wfX9fw53z?lang=he';
+            } else {
+                donateBtn.href = 'https://www.peach-in.com/cmp/wfX9fw53z?lang=en';
+            }
+        }
+    }
+    
+    function updateModalContent(t) {
+        // Gym Modal
+        const gymModalTitle = document.getElementById('gymModalTitle');
+        const gymModalText = document.querySelector('#gymModal .modal-text');
+        
+        if (gymModalTitle) gymModalTitle.textContent = t.gym_modal_title;
+        if (gymModalText) {
+            gymModalText.innerHTML = `
+                <h3>${t.gym_modal_why}</h3>
+                <p><strong>${t.gym_modal_army}</strong> ${t.gym_modal_army_text}</p>
+                <p><strong>${t.gym_modal_rambam}</strong> ${t.gym_modal_rambam_text}</p>
+                <p><strong>${t.gym_modal_balance}</strong> ${t.gym_modal_balance_text}</p>
+            `;
+        }
+        
+        // Elevator Modal
+        const elevatorModalTitle = document.getElementById('elevatorModalTitle');
+        const elevatorModalText = document.querySelector('#elevatorModal .modal-text');
+        
+        if (elevatorModalTitle) elevatorModalTitle.textContent = t.elevator_modal_title;
+        if (elevatorModalText) {
+            elevatorModalText.innerHTML = `
+                <h3>${t.elevator_modal_why}</h3>
+                <p><strong>${t.elevator_modal_equal}</strong> ${t.elevator_modal_equal_text}</p>
+                <p><strong>${t.elevator_modal_access}</strong> ${t.elevator_modal_access_text}</p>
+                <p><strong>${t.elevator_modal_values}</strong> ${t.elevator_modal_values_text}</p>
+            `;
         }
     }
     
@@ -889,3 +993,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('Script initialization complete');
 });
+
+// Project Modal Functions (outside DOMContentLoaded for global access)
+function openProjectDetails(projectType) {
+    const modal = document.getElementById(projectType + 'Modal');
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+}
+
+function closeProjectModal(projectType) {
+    const modal = document.getElementById(projectType + 'Modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    if (event.target.classList.contains('project-modal')) {
+        event.target.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
